@@ -1,4 +1,6 @@
 # Cybersource REST API Library for Java
+[![Build Status](https://travis-ci.org/CyberSource/cybersource-rest-sdk-java.png?branch=master)]
+(https://travis-ci.org/CyberSource/cybersource-rest-sdk-java)
 
 Java client bindings for the CyberSource REST API. Documentation for the CyberSource Payments REST API can be found [here](https://vdp.visa.com/products/cybersource/reference#cybersource).
 
