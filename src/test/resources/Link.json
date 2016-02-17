@@ -1,0 +1,5 @@
+{
+    "href": "https://api.visa.com/cybersource/payments/v1/credits?offset=2&limit=20",
+    "title": "Next Page",
+    "method": "GET"
+}

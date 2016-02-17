@@ -1,0 +1,12 @@
+{
+    "self":{
+        "href":"https://api.visa.com/cybersource/payments/v1/credits/4458923492365000001540",
+        "method":"GET"
+    },
+    "void":[
+        {
+            "href":"https://api.visa.com/cybersource/payments/v1/credits/4458923492365000001540/voids",
+            "method":"POST"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "id": "4458861590035000001546",
+    "status": "PendingCapture",
+    "amount": 501,
+    "currency": "USD",
+    "referenceId": "124",
+    "createDateTime": "1445886159000",
+    "payment": {
+        "cardNumber": "xxxxxxxxxxxx1111",
+        "cardExpirationMonth": "10",
+        "cardExpirationYear": "2016",
+        "cardType": "Visa"
+    },
+    "billTo": {
+        "firstName": "USERFIRST",
+        "lastName": "USERLAST",
+        "street1": "901 Metro Center Blvd",
+        "street2": "Folsom Street",
+        "city": "Foster City",
+        "state": "CA",
+        "postalCode": "94404",
+        "country": "US",
+        "company": "visa",
+        "phoneNumber": "6508764564",
+        "email": "bill@cybs.com"
+    },
+    "shipTo": {
+        "firstName": "USERFIRST",
+        "lastName": "USERLAST",
+        "street1": "901 Metro Center Blvd",
+        "street2": "folsom st.",
+        "city": "Foster City",
+        "state": "CA",
+        "postalCode": "94404",
+        "country": "US",
+        "phoneNumber": "6507686543"
+    },
+    "_links": {
+        "self": {
+            "href": "https://api.visa.com/cybersource/payments/v1/search/4458861590035000001546",
+            "method": "GET"
+        },
+        "capture": [
+            {
+                "href": "https://api.visa.com/cybersource/payments/v1/authorizations/4458861590035000001546/captures",
+                "method": "POST"
+            }
+        ]
+    }
+}

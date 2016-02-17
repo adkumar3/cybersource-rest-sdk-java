@@ -1,0 +1,13 @@
+{
+    "self":{
+        "href":"https://api.visa.com/cybersource/payments/v1/captures?offset=1&limit=20",
+        "method":"GET"
+    },
+    "next":[
+        {
+            "href":"https://api.visa.com/cybersource/payments/v1/captures?offset=2&limit=20",
+            "title":"Next Page",
+            "method":"GET"
+        }
+    ]
+}

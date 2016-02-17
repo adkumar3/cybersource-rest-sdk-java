@@ -1,0 +1,16 @@
+{
+    "id":"4434674490915000001545",
+    "status":"SettledSuccessfully",
+    "amount":501,
+    "currency":"USD",
+    "referenceId":"124",
+    "items":[
+
+    ],
+    "_links":{
+        "self":{
+            "href":"https://api.visa.com/cybersource/payments/v1/refunds/4434674490915000001545",
+            "method":"GET"
+        }
+    }
+}

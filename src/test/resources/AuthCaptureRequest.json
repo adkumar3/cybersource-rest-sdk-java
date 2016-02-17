@@ -1,0 +1,58 @@
+{
+    "amount":"20.9",
+    "currency":"USD",
+    "payment":{
+        "cardNumber":"4111111111111111",
+        "cardExpirationMonth":"10",
+        "cardExpirationYear":"2016"
+    },
+    "billTo":{
+        "street1":"1295 Charlston",
+        "street2":"Suite 100",
+        "city":"Mountain View",
+        "country":"USA",
+        "state":"CA",
+        "postalCode":"94401",
+        "firstName":"John",
+        "lastName":"Smith",
+        "email":"developer@cybersource.com"
+    },
+    "shipTo":{
+        "firstName":"USERFIRST",
+        "lastName":"USERLAST",
+        "street1":"901 Metro Center Blvd",
+        "street2":"folsom st.",
+        "city":"Foster City",
+        "state":"CA",
+        "postalCode":"94404",
+        "country":"US",
+        "phoneNumber":"6507686543"
+    },
+    "vcOrderId":"vcOrderId",
+    "commerceIndicator":"moto",
+    "items":[
+        {
+            "productSKU":"A100",
+            "quantity":"1",
+            "unitPrice":"12.99",
+            "taxAmount":"0.80"
+        }
+    ],
+    "merchantDefinedData":{
+        "field1":"test1"
+    },
+    "merchantDescriptor":{
+        "primary":"primary",
+        "alternate":"alternate",
+        "city":"San Mateo",
+        "contact":"89787889887",
+        "country":"USA",
+        "postalCode":"94404",
+        "state":"CA",
+        "street":"Shell Blvd."
+    },
+    "paymentSolution":"paymentSolution",
+    "ignoreAvs":"true",
+    "ignoreBadCvn":"true",
+    "referenceId":"1234"
+}

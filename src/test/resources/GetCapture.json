@@ -1,0 +1,43 @@
+{
+    "id":"4458965147805000001545",
+    "status":"PendingSettlement",
+    "amount":5200.9,
+    "currency":"USD",
+    "referenceId":"refNumber123455667",
+    "billTo":{
+        "firstName":"USERFIRST",
+        "lastName":"USERLAST",
+        "street1":"123 St",
+        "street2":"unit 23",
+        "city":"San Mateo",
+        "state":"CA",
+        "postalCode":"94404",
+        "country":"US",
+        "email":"test@test.com"
+    },
+    "shipTo":{
+        "firstName":"USERFIRST",
+        "lastName":"USERLAST",
+        "street1":"901 Metro Center Blvd",
+        "street2":"folsom st.",
+        "city":"Foster City",
+        "state":"CA",
+        "postalCode":"94404",
+        "country":"US"
+    },
+    "items":[
+
+    ],
+    "_links":{
+        "self":{
+            "href":"https://api.visa.com/cybersource/payments/v1/captures/4458965147805000001545",
+            "method":"GET"
+        },
+        "refund":[
+            {
+                "href":"https://api.visa.com/cybersource/payments/v1/captures/4458965147805000001545/refunds",
+                "method":"POST"
+            }
+        ]
+    }
+}

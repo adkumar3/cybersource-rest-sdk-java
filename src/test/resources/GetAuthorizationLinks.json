@@ -1,0 +1,12 @@
+{
+    "self":{
+        "href":"https://api.visa.com/cybersource/payments/v1/authorizations/4458861590035000001546",
+        "method":"GET"
+    },
+    "capture":[
+        {
+            "href":"https://api.visa.com/cybersource/payments/v1/authorizations/4458861590035000001546/captures",
+            "method":"POST"
+        }
+    ]
+}
