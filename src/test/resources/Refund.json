@@ -1,0 +1,42 @@
+{
+    "id":"4458965437825000001541",
+    "status":"PendingSettlement",
+    "amount":21.99,
+    "currency":"USD",
+    "referenceId":"124",
+    "vcOrderId": "vcOrderId",
+    "paymentSolution": "paymentSolution",
+    "merchantDefinedData": {
+        "field1": "test1"
+    },
+    "merchantDescriptor": {
+        "primary":"primary",
+        "alternate":"alternate",
+        "city":"san Mateo",
+        "contact":"89787889887",
+        "country":"USA",
+        "postalCode":"94404",
+        "state":"CA",
+        "street":"shellBlvd"
+    },
+    "items":[
+        {
+            "productSKU":"A100",
+            "quantity":"1",
+            "unitPrice":"12.99",
+            "taxAmount":"0.80"
+        }
+    ],    
+    "_links":{
+        "self":{
+            "href":"https://api.visa.com/cybersource/payments/v1/refunds/4458965437825000001541",
+            "method":"GET"
+        },
+        "void":[
+            {
+                "href":"https://api.visa.com/cybersource/payments/v1/refunds/4458965437825000001541/voids",
+                "method":"POST"
+            }
+        ]
+    }
+}

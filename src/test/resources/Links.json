@@ -1,0 +1,19 @@
+{
+    "self":{
+        "href":"https://api.visa.com/cybersource/payments/v1/errors/07c3eb55-d414-421c-819d-bf986509149b",
+        "method":"GET"
+    },
+    "documentation":[
+        {
+            "href":"https://developer.cybersource.com/api/documentation/400",
+            "method":"GET"
+        }
+    ],
+    "next":[
+        {
+            "href":"https://api.visa.com/cybersource/payments/v1/credits?offset=2&limit=20",
+            "title":"Next Page",
+            "method":"GET"
+        }
+    ]
+}

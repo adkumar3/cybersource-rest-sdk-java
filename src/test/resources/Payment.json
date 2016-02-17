@@ -1,0 +1,18 @@
+{
+    "cardNumber":"4111111111111111",
+    "cardExpirationMonth":"10",
+    "cardExpirationYear":"2016",
+    "cardType":"Visa",
+    "cardVerificationIndicator":"cardVerificationIndicator",
+    "cvn":"001",
+    "encryptedData":"ABC",
+    "encryptedDescriptor":"XYZ",
+    "encryptedEncoding":"Base64",
+    "encryptedKey":"encryptedKey",
+    "cavv":"cavv",
+    "xid":"xid",
+    "ucafAuthenticationData":"ucafAuthenticationData",
+    "ucafCollectionIndicator":"ucafCollectionIndicator",
+    "networkTokenTransactionType":"networkTokenTransactionType",
+    "networkTokenRequestorId":"networkTokenRequestorId"
+}

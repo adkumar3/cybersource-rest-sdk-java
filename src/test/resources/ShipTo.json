@@ -1,0 +1,12 @@
+{
+    "firstName":"USERFIRST",
+    "lastName":"USERLAST",
+    "street1":"901 Metro Center Blvd",
+    "street2":"folsom st.",
+    "city":"Foster City",
+    "state":"CA",
+    "postalCode":"94404",
+    "country":"US",
+    "phoneNumber":"6507686543",
+    "shippingMethod": "shippingMethod"
+}

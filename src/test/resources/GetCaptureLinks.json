@@ -1,0 +1,12 @@
+{
+    "self":{
+        "href":"https://api.visa.com/cybersource/payments/v1/captures/4458965147805000001545",
+        "method":"GET"
+    },
+    "refund":[
+        {
+            "href":"https://api.visa.com/cybersource/payments/v1/captures/4458965147805000001545/refunds",
+            "method":"POST"
+        }
+    ]
+}

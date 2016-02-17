@@ -1,0 +1,52 @@
+{
+    "id":"4407141372425000001541",
+    "status":"SettledSuccessfully",
+    "amount":20.99,
+    "currency":"USD",
+    "authCode":"831000",
+    "referenceId":"refNumber123455667",
+    "payment":{
+        "cardNumber":"xxxxxxxxxxxx1111",
+        "cardExpirationMonth":"10",
+        "cardExpirationYear":"2016",
+        "cardType":"Visa"
+    },
+    "billTo":{
+        "firstName":"USERFIRST",
+        "lastName":"USERLAST",
+        "street1":"123 St",
+        "street2":"unit 23",
+        "city":"San Mateo",
+        "state":"CA",
+        "postalCode":"94404",
+        "country":"US",
+        "email":"test@test.com"
+    },
+    "shipTo":{
+        "firstName":"userFirst",
+        "lastName":"userLast",
+        "street1":"901 Metro Center Blvd",
+        "street2":"Folsom st.",
+        "city":"Foster City",
+        "state":"CA",
+        "postalCode":"94404",
+        "country":"USA",
+        "phoneNumber":"6507686543",
+        "shippingMethod":"Mail"
+    },    
+    "items":[
+
+    ],
+    "_links":{
+        "self":{
+            "href":"https://api.visa.com/cybersource/payments/v1/sales/4407141372425000001541",
+            "method":"GET"
+        },
+        "refund":[
+            {
+                "href":"https://api.visa.com/cybersource/payments/v1/sales/4407141372425000001541/refunds",
+                "method":"POST"
+            }
+        ]
+    }
+}

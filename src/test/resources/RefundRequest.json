@@ -1,0 +1,34 @@
+{
+    "amount":"501",
+    "currency":"USD",
+    "vcOrderId": "vcOrderId",
+    "referenceId": "124",
+    "paymentSolution":"paymentSolution",
+    "merchantDescriptor":{
+        "primary":"primary",
+        "alternate":"alternate",
+        "city":"san Mateo",
+        "contact":"89787889887",
+        "country":"USA",
+        "postalCode":"94404",
+        "state":"CA",
+        "street":"Shell Blvd."
+    },
+    "merchantDefinedData": {
+        "field1": "test1"
+    },
+    "items":[
+        {
+            "productSKU":"A100",
+            "quantity":"1",
+            "unitPrice":"12.99",
+            "taxAmount":"0.80"
+        },
+        {
+            "productSKU":"A101",
+            "quantity":"4",
+            "unitPrice":"2.99",
+            "taxAmount":"0.80"
+        }
+    ]
+}

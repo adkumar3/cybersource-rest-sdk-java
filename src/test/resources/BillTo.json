@@ -1,0 +1,17 @@
+{
+    "street1":"901 Metro Center Blvd",
+    "street2":"Folsom Street",
+    "city":"Foster City",
+    "country":"USA",
+    "state":"CA",
+    "county": "San Mateo",
+    "postalCode":"94404",
+    "firstName":"userFirst",
+    "lastName":"userLast",
+    "email":"bill@cybs.com",
+    "buildingNumber":"24",
+    "district":"san mateo",
+    "company":"visa",
+    "ipAddress":"10.20.408.500",
+    "phoneNumber":"6508764564"
+}
