@@ -6,8 +6,10 @@ import java.math.BigDecimal;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -21,9 +23,9 @@ public class ResponseStatus   {
 
   
   /**
-   * HTTP Status code
+   * HTTP Status code.
    **/
-  @ApiModelProperty(value = "HTTP Status code")
+  @ApiModelProperty(value = "HTTP Status code.")
   @JsonProperty("status")
   public BigDecimal getStatus() {
     return status;
@@ -34,9 +36,9 @@ public class ResponseStatus   {
 
   
   /**
-   * Error Reason Code
+   * Error Reason Code.
    **/
-  @ApiModelProperty(value = "Error Reason Code")
+  @ApiModelProperty(value = "Error Reason Code.")
   @JsonProperty("reason")
   public String getReason() {
     return reason;
@@ -47,9 +49,9 @@ public class ResponseStatus   {
 
   
   /**
-   * Error Message
+   * Error Message.
    **/
-  @ApiModelProperty(value = "Error Message")
+  @ApiModelProperty(value = "Error Message.")
   @JsonProperty("message")
   public String getMessage() {
     return message;
@@ -60,9 +62,9 @@ public class ResponseStatus   {
 
   
   /**
-   * API Correlation ID
+   * API correlation ID.
    **/
-  @ApiModelProperty(value = "API Correlation ID")
+  @ApiModelProperty(value = "API correlation ID.")
   @JsonProperty("correlationId")
   public String getCorrelationId() {
     return correlationId;
@@ -99,3 +101,5 @@ public class ResponseStatus   {
     return sb.toString();
   }
 }
+
+

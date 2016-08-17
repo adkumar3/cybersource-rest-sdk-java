@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -18,11 +20,13 @@ public class SearchResult   {
   private String lastName = null;
   private BigDecimal amount = null;
   private String currency = null;
+  private String authCode = null;
   private String status = null;
   private String referenceId = null;
   private String requestDateTime = null;
   private String merchantTimezone = null;
   private String cardType = null;
+  private String paymentSolution = null;
   private SelfLink links = null;
 
   
@@ -105,9 +109,22 @@ public class SearchResult   {
 
   
   /**
-   * Status of the transaction. E.g. PendingSettlement
+   * Authorization code for the transaction.
    **/
-  @ApiModelProperty(value = "Status of the transaction. E.g. PendingSettlement")
+  @ApiModelProperty(value = "Authorization code for the transaction.")
+  @JsonProperty("authCode")
+  public String getAuthCode() {
+    return authCode;
+  }
+  public void setAuthCode(String authCode) {
+    this.authCode = authCode;
+  }
+
+  
+  /**
+   * Status of the transaction. For example, PendingSettlement.
+   **/
+  @ApiModelProperty(value = "Status of the transaction. For example, PendingSettlement.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -118,9 +135,9 @@ public class SearchResult   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -157,15 +174,28 @@ public class SearchResult   {
 
   
   /**
-   * Card type, e.g. Visa, Mastercard.
+   * Card type, such as Visa or Mastercard.
    **/
-  @ApiModelProperty(value = "Card type, e.g. Visa, Mastercard.")
+  @ApiModelProperty(value = "Card type, such as Visa or Mastercard.")
   @JsonProperty("cardType")
   public String getCardType() {
     return cardType;
   }
   public void setCardType(String cardType) {
     this.cardType = cardType;
+  }
+
+  
+  /**
+   * Type of payment solution that is being used for the transaction.
+   **/
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
+  @JsonProperty("paymentSolution")
+  public String getPaymentSolution() {
+    return paymentSolution;
+  }
+  public void setPaymentSolution(String paymentSolution) {
+    this.paymentSolution = paymentSolution;
   }
 
   
@@ -193,13 +223,17 @@ public class SearchResult   {
     sb.append("  lastName: ").append(lastName).append("\n");
     sb.append("  amount: ").append(amount).append("\n");
     sb.append("  currency: ").append(currency).append("\n");
+    sb.append("  authCode: ").append(authCode).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  referenceId: ").append(referenceId).append("\n");
     sb.append("  requestDateTime: ").append(requestDateTime).append("\n");
     sb.append("  merchantTimezone: ").append(merchantTimezone).append("\n");
     sb.append("  cardType: ").append(cardType).append("\n");
+    sb.append("  paymentSolution: ").append(paymentSolution).append("\n");
     sb.append("  links: ").append(links).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
+
+

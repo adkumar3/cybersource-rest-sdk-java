@@ -1,0 +1,16 @@
+{
+    "id": "4544372898786027101540",
+    "status": "AuthReversed",
+    "amount": 501,
+    "currency": "USD",
+    "referenceId": "124",
+    "requestDateTime": "1451203815000",
+    "paymentSolution": "visacheckout",
+    "vcOrderId": "2025126164316585101",
+    "_links": {
+        "self": {
+            "href": "https://api.visa.com/cybersource/payments/v1/reversals/4544372898786027101540",
+            "method": "GET"
+        }
+    }
+}

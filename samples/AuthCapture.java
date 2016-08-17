@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import com.visa.payments.ApiException;
@@ -20,6 +21,7 @@ public class AuthCapture {
                 builder.setApiKey("apikey")
                         .setSecretKey("secretkey")
 			.setTimeoutMilliseconds(30000);
+		String nextYear = Integer.toString((Calendar.getInstance().get(Calendar.YEAR) + 1));
 
 		Configuration config = builder.build();
 		AuthorizationsApi authApi = new AuthorizationsApi(config);
@@ -29,7 +31,7 @@ public class AuthCapture {
 		Payment payment = new Payment();
 		payment.setCardNumber("4111111111111111");
 		payment.setCardExpirationMonth("10");
-		payment.setCardExpirationYear("2016");
+		payment.setCardExpirationYear(nextYear);
 
 		authCaptureRequest.setPayment(payment);
 		authCaptureRequest.setAmount(new BigDecimal(5.00));
@@ -47,9 +49,7 @@ public class AuthCapture {
 			// Retrieve an authorization
 			GetAuthorization getAuth = authApi.getAuthorization(id);
 			System.out.println("Retrieve authorization with authId '" + id + "': " + getAuth);
-			
-			TimeUnit.SECONDS.sleep(2);
-			
+						
 			// Perform a capture against an authorization
 			CaptureRequest captureRequest = new CaptureRequest();
 			captureRequest.setAmount(new BigDecimal(5.00));

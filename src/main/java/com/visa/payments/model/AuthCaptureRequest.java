@@ -11,8 +11,10 @@ import com.visa.payments.model.MerchantDefinedData;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -35,9 +37,9 @@ public class AuthCaptureRequest   {
 
   
   /**
-   * Amount of the transaction
+   * Amount of the transaction.
    **/
-  @ApiModelProperty(required = true, value = "Amount of the transaction")
+  @ApiModelProperty(required = true, value = "Amount of the transaction.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -48,9 +50,9 @@ public class AuthCaptureRequest   {
 
   
   /**
-   * Currency used for the transaction
+   * Currency used for the transaction.
    **/
-  @ApiModelProperty(required = true, value = "Currency used for the transaction")
+  @ApiModelProperty(required = true, value = "Currency used for the transaction.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -97,9 +99,9 @@ public class AuthCaptureRequest   {
 
   
   /**
-   * Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout
+   * Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.
    **/
-  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout")
+  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.")
   @JsonProperty("vcOrderId")
   public String getVcOrderId() {
     return vcOrderId;
@@ -110,9 +112,9 @@ public class AuthCaptureRequest   {
 
   
   /**
-   * Type of transaction. Some payment card companies use this information when determining discount rates.
+   * Type of transaction. Some payment card companies use this information when establishing discount rates.
    **/
-  @ApiModelProperty(value = "Type of transaction. Some payment card companies use this information when determining discount rates.")
+  @ApiModelProperty(value = "Type of transaction. Some payment card companies use this information when establishing discount rates.")
   @JsonProperty("commerceIndicator")
   public String getCommerceIndicator() {
     return commerceIndicator;
@@ -123,9 +125,9 @@ public class AuthCaptureRequest   {
 
   
   /**
-   * Setting to ignore Avs
+   * The setting to ignore AVS.
    **/
-  @ApiModelProperty(value = "Setting to ignore Avs")
+  @ApiModelProperty(value = "The setting to ignore AVS.")
   @JsonProperty("ignoreAvs")
   public String getIgnoreAvs() {
     return ignoreAvs;
@@ -136,9 +138,9 @@ public class AuthCaptureRequest   {
 
   
   /**
-   * Setting to ignore bad CVN
+   * The setting to ignore bad CVN.
    **/
-  @ApiModelProperty(value = "Setting to ignore bad CVN")
+  @ApiModelProperty(value = "The setting to ignore bad CVN.")
   @JsonProperty("ignoreBadCvn")
   public String getIgnoreBadCvn() {
     return ignoreBadCvn;
@@ -149,9 +151,9 @@ public class AuthCaptureRequest   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -162,9 +164,9 @@ public class AuthCaptureRequest   {
 
   
   /**
-   * Type of payment solution that is being used for the transaction
+   * Type of payment solution that is being used for the transaction.
    **/
-  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction")
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
   @JsonProperty("paymentSolution")
   public String getPaymentSolution() {
     return paymentSolution;
@@ -234,3 +236,5 @@ public class AuthCaptureRequest   {
     return sb.toString();
   }
 }
+
+

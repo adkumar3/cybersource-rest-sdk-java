@@ -3,8 +3,10 @@ package com.visa.payments.model;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -21,9 +23,9 @@ public class MerchantDescriptor   {
 
   
   /**
-   * Merchant description that is displayed on the cardholders statement
+   * Merchant description that is displayed on the cardholder's statement.
    **/
-  @ApiModelProperty(value = "Merchant description that is displayed on the cardholders statement")
+  @ApiModelProperty(value = "Merchant description that is displayed on the cardholder's statement.")
   @JsonProperty("primary")
   public String getPrimary() {
     return primary;
@@ -60,9 +62,9 @@ public class MerchantDescriptor   {
 
   
   /**
-   * Merchant contact information, such as a phone number  that is displayed on the cardholders statement.
+   * Merchant contact information, such as a phone number that is displayed on the cardholder statement.
    **/
-  @ApiModelProperty(value = "Merchant contact information, such as a phone number  that is displayed on the cardholders statement.")
+  @ApiModelProperty(value = "Merchant contact information, such as a phone number that is displayed on the cardholder statement.")
   @JsonProperty("contact")
   public String getContact() {
     return contact;
@@ -73,9 +75,9 @@ public class MerchantDescriptor   {
 
   
   /**
-   * Merchant country that is displayed on the cardholders statement.
+   * Merchant country that is displayed on the cardholder's statement.
    **/
-  @ApiModelProperty(value = "Merchant country that is displayed on the cardholders statement.")
+  @ApiModelProperty(value = "Merchant country that is displayed on the cardholder's statement.")
   @JsonProperty("country")
   public String getCountry() {
     return country;
@@ -86,9 +88,9 @@ public class MerchantDescriptor   {
 
   
   /**
-   * Merchant postal code that is displayed on the cardholders statement
+   * Merchant postal code that is displayed on the cardholder's statement.
    **/
-  @ApiModelProperty(value = "Merchant postal code that is displayed on the cardholders statement")
+  @ApiModelProperty(value = "Merchant postal code that is displayed on the cardholder's statement.")
   @JsonProperty("postalCode")
   public String getPostalCode() {
     return postalCode;
@@ -99,9 +101,9 @@ public class MerchantDescriptor   {
 
   
   /**
-   * Merchant state that is displayed on the cardholders statement.
+   * Merchant state that is displayed on the cardholder's statement.
    **/
-  @ApiModelProperty(value = "Merchant state that is displayed on the cardholders statement.")
+  @ApiModelProperty(value = "Merchant state that is displayed on the cardholder's statement.")
   @JsonProperty("state")
   public String getState() {
     return state;
@@ -112,9 +114,9 @@ public class MerchantDescriptor   {
 
   
   /**
-   * Merchant street address that is displayed on the cardholders statement.
+   * Merchant street address that is displayed on the cardholder's statement.
    **/
-  @ApiModelProperty(value = "Merchant street address that is displayed on the cardholders statement.")
+  @ApiModelProperty(value = "Merchant street address that is displayed on the cardholder's statement.")
   @JsonProperty("street")
   public String getStreet() {
     return street;
@@ -142,3 +144,5 @@ public class MerchantDescriptor   {
     return sb.toString();
   }
 }
+
+

@@ -9,57 +9,62 @@ import com.visa.payments.TypeRef;
 import java.util.*;
 
 import com.visa.payments.model.AuthorizationLinks;
-import com.visa.payments.model.Sale;
 import com.visa.payments.model.TransactionSearch;
-import com.visa.payments.model.CaptureLinks;
 import com.visa.payments.model.CreditCollection;
 import com.visa.payments.model.VoidRequest;
-import com.visa.payments.model.GetCaptureLinks;
-import com.visa.payments.model.CreditRequest;
 import com.visa.payments.model.AuthCaptureRequest;
-import com.visa.payments.model.GetAuthorizationLinks;
 import com.visa.payments.model.ResponseStatusDetails;
 import com.visa.payments.model.ErrorResource;
 import com.visa.payments.model.TransactionSearchCollection;
-import com.visa.payments.model.SaleLinks;
 import com.visa.payments.model.Capture;
-import com.visa.payments.model.Authorization;
 import com.visa.payments.model.Item;
 import com.visa.payments.model.CaptureCollection;
-import com.visa.payments.model.Credit;
-import com.visa.payments.model.MerchantDescriptor;
 import com.visa.payments.model.BillTo;
-import com.visa.payments.model.RefundLinks;
 import com.visa.payments.model.Void;
 import com.visa.payments.model.GetRefund;
-import com.visa.payments.model.MerchantDefinedData;
 import com.visa.payments.model.GetSale;
 import com.visa.payments.model.GetCredit;
 import com.visa.payments.model.SaleCollection;
-import com.visa.payments.model.TransactionSearchRequest;
-import com.visa.payments.model.CreditLinks;
-import com.visa.payments.model.SelfLink;
 import com.visa.payments.model.AuthorizationCollection;
-import com.visa.payments.model.Error;
-import com.visa.payments.model.RefundCollection;
-import com.visa.payments.model.SearchResult;
 import com.visa.payments.model.CollectionLinks;
-import com.visa.payments.model.GetAuthorization;
 import com.visa.payments.model.Payment;
 import com.visa.payments.model.Refund;
-import com.visa.payments.model.RefundRequest;
 import com.visa.payments.model.Transaction;
 import com.visa.payments.model.ResponseStatus;
-import com.visa.payments.model.Links;
-import com.visa.payments.model.ShipTo;
-import com.visa.payments.model.CaptureRequest;
 import com.visa.payments.model.Link;
 import com.visa.payments.model.GetCapture;
 import com.visa.payments.model.GetSaleLinks;
+import com.visa.payments.model.Sale;
+import com.visa.payments.model.CaptureLinks;
+import com.visa.payments.model.GetCaptureLinks;
+import com.visa.payments.model.CreditRequest;
+import com.visa.payments.model.GetAuthorizationLinks;
+import com.visa.payments.model.ReverseAuthRequest;
+import com.visa.payments.model.SaleLinks;
+import com.visa.payments.model.Authorization;
+import com.visa.payments.model.Credit;
+import com.visa.payments.model.MerchantDescriptor;
+import com.visa.payments.model.RefundLinks;
+import com.visa.payments.model.MerchantDefinedData;
+import com.visa.payments.model.ReversedAuthorization;
+import com.visa.payments.model.TransactionSearchRequest;
+import com.visa.payments.model.CreditLinks;
+import com.visa.payments.model.SelfLink;
+import com.visa.payments.model.Error;
+import com.visa.payments.model.RefundCollection;
+import com.visa.payments.model.SearchResult;
+import com.visa.payments.model.Terminal;
+import com.visa.payments.model.GetAuthorization;
+import com.visa.payments.model.RefundRequest;
+import com.visa.payments.model.Links;
+import com.visa.payments.model.ShipTo;
+import com.visa.payments.model.CaptureRequest;
+
 
 import java.io.File;
 import java.util.Map;
 import java.util.HashMap;
+
 
 public class CreditsApi {
   private ApiClient apiClient;
@@ -78,7 +83,7 @@ public class CreditsApi {
 
   
   /**
-   * Retrieve all Credits
+   * Retrieve all credits.
    * 
    * @param offset offset
    * @param limit limit
@@ -122,9 +127,9 @@ public class CreditsApi {
   }
   
   /**
-   * Post a Credit
-   * Creates a new Credit
-   * @param request credit request data
+   * Post a credit.
+   * Creates a new credit.
+   * @param request Credit request data.
    * @return Credit
    */
   public Credit createCredit (CreditRequest request) throws ApiException {
@@ -166,9 +171,9 @@ public class CreditsApi {
   }
   
   /**
-   * Retrieve a Credit
+   * Retrieve a credit.
    * 
-   * @param id Unique identifier for the transaction
+   * @param id Unique identifier for the transaction.
    * @return GetCredit
    */
   public GetCredit getCredit (String id) throws ApiException {
@@ -211,3 +216,4 @@ public class CreditsApi {
   }
   
 }
+

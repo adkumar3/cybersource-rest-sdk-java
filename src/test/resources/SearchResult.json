@@ -10,6 +10,8 @@
     "requestDateTime":"1445976224000",
     "cardType":"Visa",
     "merchantTimezone": "PST",
+    "authCode": "831000",
+    "paymentSolution": "001",
     "_links":{
         "self":{
             "href":"https://api.visa.com/cybersource/payments/v1/search/4458968837865000001545",

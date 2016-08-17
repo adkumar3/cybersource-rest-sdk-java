@@ -14,5 +14,11 @@
             "href":"https://api.visa.com/cybersource/payments/v1/authorizations/4458861590035000001546/captures",
             "method":"POST"
         }
+    ],
+    "reversal": [
+      {
+        "href": "https://qa.api.visa.com/cybersource/payments/v1/authorizations/4577309081986000801540/reversals",
+        "method": "POST"
+      }
     ]
 }

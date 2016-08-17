@@ -3,17 +3,21 @@ package com.visa.payments.model;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
 public class Item   {
   
   private String productSKU = null;
+  private String productCode = null;
+  private String productName = null;
   private String quantity = null;
-  private String unitPrice = null;
   private String taxAmount = null;
+  private String amount = null;
 
   
   /**
@@ -30,9 +34,35 @@ public class Item   {
 
   
   /**
-   * Quantity.
+   * Product Code
    **/
-  @ApiModelProperty(value = "Quantity.")
+  @ApiModelProperty(value = "Product Code")
+  @JsonProperty("productCode")
+  public String getProductCode() {
+    return productCode;
+  }
+  public void setProductCode(String productCode) {
+    this.productCode = productCode;
+  }
+
+  
+  /**
+   * Product Name
+   **/
+  @ApiModelProperty(value = "Product Name")
+  @JsonProperty("productName")
+  public String getProductName() {
+    return productName;
+  }
+  public void setProductName(String productName) {
+    this.productName = productName;
+  }
+
+  
+  /**
+   * Quantity
+   **/
+  @ApiModelProperty(value = "Quantity")
   @JsonProperty("quantity")
   public String getQuantity() {
     return quantity;
@@ -43,28 +73,28 @@ public class Item   {
 
   
   /**
-   * Unit Price.
+   * Tax Amount
    **/
-  @ApiModelProperty(value = "Unit Price.")
-  @JsonProperty("unitPrice")
-  public String getUnitPrice() {
-    return unitPrice;
-  }
-  public void setUnitPrice(String unitPrice) {
-    this.unitPrice = unitPrice;
-  }
-
-  
-  /**
-   * Tax Amount.
-   **/
-  @ApiModelProperty(value = "Tax Amount.")
+  @ApiModelProperty(value = "Tax Amount")
   @JsonProperty("taxAmount")
   public String getTaxAmount() {
     return taxAmount;
   }
   public void setTaxAmount(String taxAmount) {
     this.taxAmount = taxAmount;
+  }
+
+  
+  /**
+   * Amount.
+   **/
+  @ApiModelProperty(value = "Amount.")
+  @JsonProperty("amount")
+  public String getAmount() {
+    return amount;
+  }
+  public void setAmount(String amount) {
+    this.amount = amount;
   }
 
   
@@ -75,10 +105,14 @@ public class Item   {
     sb.append("class Item {\n");
     
     sb.append("  productSKU: ").append(productSKU).append("\n");
+    sb.append("  productCode: ").append(productCode).append("\n");
+    sb.append("  productName: ").append(productName).append("\n");
     sb.append("  quantity: ").append(quantity).append("\n");
-    sb.append("  unitPrice: ").append(unitPrice).append("\n");
     sb.append("  taxAmount: ").append(taxAmount).append("\n");
+    sb.append("  amount: ").append(amount).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
+
+

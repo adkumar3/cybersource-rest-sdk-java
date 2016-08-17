@@ -5,6 +5,8 @@
     "currency":"USD",
     "authCode":"831000",
     "referenceId":"refNumber123455667",
+    "createDateTime": "946684800",
+    "paymentSolution": "001",
     "payment":{
         "cardNumber":"xxxxxxxxxxxx1111",
         "cardExpirationMonth":"10",

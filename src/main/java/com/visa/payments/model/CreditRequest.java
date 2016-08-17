@@ -11,8 +11,10 @@ import com.visa.payments.model.MerchantDefinedData;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -32,9 +34,9 @@ public class CreditRequest   {
 
   
   /**
-   * Total amount of the transaction
+   * Total amount of the transaction.
    **/
-  @ApiModelProperty(required = true, value = "Total amount of the transaction")
+  @ApiModelProperty(required = true, value = "Total amount of the transaction.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -45,9 +47,9 @@ public class CreditRequest   {
 
   
   /**
-   * Currency used for the transaction
+   * Currency used for the transaction.
    **/
-  @ApiModelProperty(required = true, value = "Currency used for the transaction")
+  @ApiModelProperty(required = true, value = "Currency used for the transaction.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -58,9 +60,9 @@ public class CreditRequest   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -71,9 +73,9 @@ public class CreditRequest   {
 
   
   /**
-   * Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout
+   * Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.
    **/
-  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout")
+  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.")
   @JsonProperty("vcOrderId")
   public String getVcOrderId() {
     return vcOrderId;
@@ -120,9 +122,9 @@ public class CreditRequest   {
 
   
   /**
-   * Type of payment solution that is being used for the transaction
+   * Type of payment solution that is being used for the transaction.
    **/
-  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction")
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
   @JsonProperty("paymentSolution")
   public String getPaymentSolution() {
     return paymentSolution;
@@ -189,3 +191,5 @@ public class CreditRequest   {
     return sb.toString();
   }
 }
+
+

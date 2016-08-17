@@ -9,8 +9,10 @@ import com.visa.payments.model.MerchantDefinedData;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -33,9 +35,9 @@ public class Refund   {
 
   
   /**
-   * The unique identifier for the refund
+   * The unique identifier for the refund.
    **/
-  @ApiModelProperty(value = "The unique identifier for the refund")
+  @ApiModelProperty(value = "The unique identifier for the refund.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -46,9 +48,9 @@ public class Refund   {
 
   
   /**
-   * Status of the refund
+   * Status of the refund.
    **/
-  @ApiModelProperty(value = "Status of the refund")
+  @ApiModelProperty(value = "Status of the refund.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -59,9 +61,9 @@ public class Refund   {
 
   
   /**
-   * The amount of the refund
+   * The amount of the refund.
    **/
-  @ApiModelProperty(value = "The amount of the refund")
+  @ApiModelProperty(value = "The amount of the refund.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -72,9 +74,9 @@ public class Refund   {
 
   
   /**
-   * The currency of the refund amount
+   * The currency of the refund amount.
    **/
-  @ApiModelProperty(value = "The currency of the refund amount")
+  @ApiModelProperty(value = "The currency of the refund amount.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -85,9 +87,9 @@ public class Refund   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -98,9 +100,9 @@ public class Refund   {
 
   
   /**
-   * Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout
+   * Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.
    **/
-  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout")
+  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.")
   @JsonProperty("vcOrderId")
   public String getVcOrderId() {
     return vcOrderId;
@@ -111,9 +113,9 @@ public class Refund   {
 
   
   /**
-   * Type of payment solution that is being used for the transaction
+   * Type of payment solution that is being used for the transaction.
    **/
-  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction")
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
   @JsonProperty("paymentSolution")
   public String getPaymentSolution() {
     return paymentSolution;
@@ -192,3 +194,5 @@ public class Refund   {
     return sb.toString();
   }
 }
+
+

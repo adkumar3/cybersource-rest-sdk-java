@@ -4,6 +4,8 @@
     "amount":5200.9,
     "currency":"USD",
     "referenceId":"refNumber123455667",
+    "createDateTime": "946684800",
+    "paymentSolution": "001",
     "billTo":{
         "firstName":"USERFIRST",
         "lastName":"USERLAST",

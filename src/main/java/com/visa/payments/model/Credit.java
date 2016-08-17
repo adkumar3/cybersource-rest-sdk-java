@@ -12,8 +12,10 @@ import com.visa.payments.model.MerchantDefinedData;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -39,9 +41,9 @@ public class Credit   {
 
   
   /**
-   * Unique identifier for transaction
+   * Unique identifier for transaction.
    **/
-  @ApiModelProperty(value = "Unique identifier for transaction")
+  @ApiModelProperty(value = "Unique identifier for transaction.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -52,9 +54,9 @@ public class Credit   {
 
   
   /**
-   * Status of the credit
+   * Status of the credit.
    **/
-  @ApiModelProperty(value = "Status of the credit")
+  @ApiModelProperty(value = "Status of the credit.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -65,9 +67,9 @@ public class Credit   {
 
   
   /**
-   * Total amount of the transaction
+   * Total amount of the transaction.
    **/
-  @ApiModelProperty(required = true, value = "Total amount of the transaction")
+  @ApiModelProperty(required = true, value = "Total amount of the transaction.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -78,9 +80,9 @@ public class Credit   {
 
   
   /**
-   * Currency used for the transaction
+   * Currency used for the transaction.
    **/
-  @ApiModelProperty(required = true, value = "Currency used for the transaction")
+  @ApiModelProperty(required = true, value = "Currency used for the transaction.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -91,9 +93,9 @@ public class Credit   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -104,9 +106,9 @@ public class Credit   {
 
   
   /**
-   * Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout
+   * Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.
    **/
-  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout")
+  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.")
   @JsonProperty("vcOrderId")
   public String getVcOrderId() {
     return vcOrderId;
@@ -117,9 +119,9 @@ public class Credit   {
 
   
   /**
-   * Type of payment solution that is being used for the transaction
+   * Type of payment solution that is being used for the transaction.
    **/
-  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction")
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
   @JsonProperty("paymentSolution")
   public String getPaymentSolution() {
     return paymentSolution;
@@ -237,3 +239,5 @@ public class Credit   {
     return sb.toString();
   }
 }
+
+
