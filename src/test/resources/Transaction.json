@@ -3,8 +3,10 @@
     "status": "PendingCapture",
     "amount": 501,
     "currency": "USD",
+    "authCode": "831000",
     "referenceId": "124",
     "createDateTime": "1445886159000",
+    "paymentSolution": "001",
     "payment": {
         "cardNumber": "xxxxxxxxxxxx1111",
         "cardExpirationMonth": "10",

@@ -8,8 +8,10 @@ import com.visa.payments.model.MerchantDefinedData;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -26,9 +28,9 @@ public class RefundRequest   {
 
   
   /**
-   * The amount to refund
+   * The amount to refund.
    **/
-  @ApiModelProperty(value = "The amount to refund")
+  @ApiModelProperty(value = "The amount to refund.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -39,9 +41,9 @@ public class RefundRequest   {
 
   
   /**
-   * The currency of the refund amount
+   * The currency of the refund amount.
    **/
-  @ApiModelProperty(value = "The currency of the refund amount")
+  @ApiModelProperty(value = "The currency of the refund amount.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -52,9 +54,9 @@ public class RefundRequest   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -65,9 +67,9 @@ public class RefundRequest   {
 
   
   /**
-   * Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout
+   * Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.
    **/
-  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout")
+  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.")
   @JsonProperty("vcOrderId")
   public String getVcOrderId() {
     return vcOrderId;
@@ -90,9 +92,9 @@ public class RefundRequest   {
 
   
   /**
-   * Type of payment solution that is being used for the transaction
+   * Type of payment solution that is being used for the transaction.
    **/
-  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction")
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
   @JsonProperty("paymentSolution")
   public String getPaymentSolution() {
     return paymentSolution;
@@ -144,3 +146,5 @@ public class RefundRequest   {
     return sb.toString();
   }
 }
+
+

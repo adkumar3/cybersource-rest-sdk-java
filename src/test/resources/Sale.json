@@ -161,13 +161,13 @@
         {
             "productSKU":"A100",
             "quantity":"1",
-            "unitPrice":"12.99",
+            "amount":"12.99",
             "taxAmount":"0.80"
         },
         {
             "productSKU":"A101",
             "quantity":"4",
-            "unitPrice":"2.99",
+            "amount":"2.99",
             "taxAmount":"0.80"
         }
     ],

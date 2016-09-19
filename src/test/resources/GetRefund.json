@@ -4,6 +4,8 @@
     "amount":501,
     "currency":"USD",
     "referenceId":"124",
+    "createDateTime": "946684800",
+    "paymentSolution": "001",
     "items":[
 
     ],

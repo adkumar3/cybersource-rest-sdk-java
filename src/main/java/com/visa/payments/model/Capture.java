@@ -11,8 +11,10 @@ import com.visa.payments.model.MerchantDefinedData;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -37,9 +39,9 @@ public class Capture   {
 
   
   /**
-   * Unique identifier for the transaction
+   * Unique identifier for the transaction.
    **/
-  @ApiModelProperty(value = "Unique identifier for the transaction")
+  @ApiModelProperty(value = "Unique identifier for the transaction.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -50,9 +52,9 @@ public class Capture   {
 
   
   /**
-   * Status of the capture
+   * Status of the capture.
    **/
-  @ApiModelProperty(value = "Status of the capture")
+  @ApiModelProperty(value = "Status of the capture.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -63,9 +65,9 @@ public class Capture   {
 
   
   /**
-   * Amount to capture from the authorization
+   * Amount to capture from the authorization.
    **/
-  @ApiModelProperty(value = "Amount to capture from the authorization")
+  @ApiModelProperty(value = "Amount to capture from the authorization.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -76,9 +78,9 @@ public class Capture   {
 
   
   /**
-   * Currency used for the transaction
+   * Currency used for the transaction.
    **/
-  @ApiModelProperty(value = "Currency used for the transaction")
+  @ApiModelProperty(value = "Currency used for the transaction.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -89,9 +91,9 @@ public class Capture   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -102,9 +104,9 @@ public class Capture   {
 
   
   /**
-   * Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout
+   * Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.
    **/
-  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout")
+  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.")
   @JsonProperty("vcOrderId")
   public String getVcOrderId() {
     return vcOrderId;
@@ -115,9 +117,9 @@ public class Capture   {
 
   
   /**
-   * Type of payment solution that is being used for the transaction
+   * Type of payment solution that is being used for the transaction.
    **/
-  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction")
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
   @JsonProperty("paymentSolution")
   public String getPaymentSolution() {
     return paymentSolution;
@@ -222,3 +224,5 @@ public class Capture   {
     return sb.toString();
   }
 }
+
+

@@ -7,8 +7,10 @@ import java.math.BigDecimal;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -22,15 +24,17 @@ public class GetCapture   {
   private BigDecimal amount = null;
   private String currency = null;
   private String referenceId = null;
+  private String createDateTime = null;
+  private String paymentSolution = null;
   private BillTo billTo = null;
   private ShipTo shipTo = null;
   private GetCaptureLinks links = null;
 
   
   /**
-   * Unique identifier for the transaction
+   * Unique identifier for the transaction.
    **/
-  @ApiModelProperty(value = "Unique identifier for the transaction")
+  @ApiModelProperty(value = "Unique identifier for the transaction.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -41,9 +45,9 @@ public class GetCapture   {
 
   
   /**
-   * Status of the capture
+   * Status of the capture.
    **/
-  @ApiModelProperty(value = "Status of the capture")
+  @ApiModelProperty(value = "Status of the capture.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -54,9 +58,9 @@ public class GetCapture   {
 
   
   /**
-   * Amount to capture from the authorization
+   * Amount to capture from the authorization.
    **/
-  @ApiModelProperty(value = "Amount to capture from the authorization")
+  @ApiModelProperty(value = "Amount to capture from the authorization.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -67,9 +71,9 @@ public class GetCapture   {
 
   
   /**
-   * Currency used for the transaction
+   * Currency used for the transaction.
    **/
-  @ApiModelProperty(value = "Currency used for the transaction")
+  @ApiModelProperty(value = "Currency used for the transaction.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -80,15 +84,41 @@ public class GetCapture   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
   }
   public void setReferenceId(String referenceId) {
     this.referenceId = referenceId;
+  }
+
+  
+  /**
+   * Time in UTC when the transaction was created.
+   **/
+  @ApiModelProperty(value = "Time in UTC when the transaction was created.")
+  @JsonProperty("createDateTime")
+  public String getCreateDateTime() {
+    return createDateTime;
+  }
+  public void setCreateDateTime(String createDateTime) {
+    this.createDateTime = createDateTime;
+  }
+
+  
+  /**
+   * Type of payment solution that is being used for the transaction.
+   **/
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
+  @JsonProperty("paymentSolution")
+  public String getPaymentSolution() {
+    return paymentSolution;
+  }
+  public void setPaymentSolution(String paymentSolution) {
+    this.paymentSolution = paymentSolution;
   }
 
   
@@ -139,6 +169,8 @@ public class GetCapture   {
     sb.append("  amount: ").append(amount).append("\n");
     sb.append("  currency: ").append(currency).append("\n");
     sb.append("  referenceId: ").append(referenceId).append("\n");
+    sb.append("  createDateTime: ").append(createDateTime).append("\n");
+    sb.append("  paymentSolution: ").append(paymentSolution).append("\n");
     sb.append("  billTo: ").append(billTo).append("\n");
     sb.append("  shipTo: ").append(shipTo).append("\n");
     sb.append("  links: ").append(links).append("\n");
@@ -146,3 +178,5 @@ public class GetCapture   {
     return sb.toString();
   }
 }
+
+

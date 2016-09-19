@@ -55,7 +55,7 @@ public class ApiClientTest {
     }
 
     @Test
-    public void testErrorResponse() throws URISyntaxException, IOException {
+    public void testErrorResponse() throws ApiException, URISyntaxException, IOException {
         File file = new File(Thread.currentThread().getContextClassLoader().getResource("Error.json").toURI());
         String error = new String(Files.readAllBytes(file.toPath())); 
 
@@ -67,6 +67,7 @@ public class ApiClientTest {
 
         client.getHostMap().put("test", mockClient);
 
+        exception.expect(ApiException.class);
         try {
             client.invokeAPI(
                 "payments/v1/authorizations",
@@ -79,22 +80,26 @@ public class ApiClientTest {
                 new TypeRef<AuthorizationCollection>(){});            
         } catch(ApiException e) {
             assertTrue(e.getError() instanceof com.visa.payments.model.Error);
+            throw e;
         }
     }
 
     @Test
     public void testNoResponse() throws ApiException {
-        InputStream is = new ByteArrayInputStream( "".getBytes() );
-        exception.expect(ApiException.class);
-        client.invokeAPI(
-            "payments/v1/authorizations",
-            "GET", new ArrayList<Pair>(),
-            new ArrayList<Pair>(),
-            new HashMap<String, String>(),
-            new HashMap<String, Object>(),
-            null,
-            "application/json",
-            new TypeRef<AuthorizationCollection>(){});        
+        ClientResponse mockResponse = mock(ClientResponse.class);
+        when(mockResponse.getStatusInfo()).thenReturn(ClientResponse.Status.NO_CONTENT);
+        when(mockBuilder.get(any(Class.class))).thenReturn(mockResponse);
+        client.getHostMap().put("test", mockClient);
+        AuthorizationCollection auths = client.invokeAPI(
+                "payments/v1/authorizations",
+                "GET", new ArrayList<Pair>(),
+                new ArrayList<Pair>(),
+                new HashMap<String, String>(),
+                new HashMap<String, Object>(),
+                null,
+                "application/json",
+                new TypeRef<AuthorizationCollection>(){});
+        assertEquals(auths, null);    
     }
 
     @Test

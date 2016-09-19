@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -24,9 +26,9 @@ public class Void   {
 
   
   /**
-   * ID of the voided transaction
+   * ID of the voided transaction.
    **/
-  @ApiModelProperty(value = "ID of the voided transaction")
+  @ApiModelProperty(value = "ID of the voided transaction.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -37,9 +39,9 @@ public class Void   {
 
   
   /**
-   * Status of the void
+   * Status of the void.
    **/
-  @ApiModelProperty(value = "Status of the void")
+  @ApiModelProperty(value = "Status of the void.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -50,9 +52,9 @@ public class Void   {
 
   
   /**
-   * Amount to void
+   * Amount to void.
    **/
-  @ApiModelProperty(value = "Amount to void")
+  @ApiModelProperty(value = "Amount to void.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -63,9 +65,9 @@ public class Void   {
 
   
   /**
-   * Currency of the amount to void
+   * Currency of the amount to void.
    **/
-  @ApiModelProperty(value = "Currency of the amount to void")
+  @ApiModelProperty(value = "Currency of the amount to void.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -76,9 +78,9 @@ public class Void   {
 
   
   /**
-   * merchant provided reference id of the voided transaction
+   * Merchant-provided reference ID of the voided transaction.
    **/
-  @ApiModelProperty(value = "merchant provided reference id of the voided transaction")
+  @ApiModelProperty(value = "Merchant-provided reference ID of the voided transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -116,3 +118,5 @@ public class Void   {
     return sb.toString();
   }
 }
+
+

@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -20,13 +22,15 @@ public class GetRefund   {
   private BigDecimal amount = null;
   private String currency = null;
   private String referenceId = null;
+  private String createDateTime = null;
+  private String paymentSolution = null;
   private SelfLink links = null;
 
   
   /**
-   * The unique identifier for the refund
+   * The unique identifier for the refund.
    **/
-  @ApiModelProperty(value = "The unique identifier for the refund")
+  @ApiModelProperty(value = "The unique identifier for the refund.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -37,9 +41,9 @@ public class GetRefund   {
 
   
   /**
-   * Status of the refund
+   * Status of the refund.
    **/
-  @ApiModelProperty(value = "Status of the refund")
+  @ApiModelProperty(value = "Status of the refund.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -50,9 +54,9 @@ public class GetRefund   {
 
   
   /**
-   * The amount of the refund
+   * The amount of the refund.
    **/
-  @ApiModelProperty(value = "The amount of the refund")
+  @ApiModelProperty(value = "The amount of the refund.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -63,9 +67,9 @@ public class GetRefund   {
 
   
   /**
-   * The currency of the refund amount
+   * The currency of the refund amount.
    **/
-  @ApiModelProperty(value = "The currency of the refund amount")
+  @ApiModelProperty(value = "The currency of the refund amount.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -76,15 +80,41 @@ public class GetRefund   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
   }
   public void setReferenceId(String referenceId) {
     this.referenceId = referenceId;
+  }
+
+  
+  /**
+   * Time in UTC when the transaction was created.
+   **/
+  @ApiModelProperty(value = "Time in UTC when the transaction was created.")
+  @JsonProperty("createDateTime")
+  public String getCreateDateTime() {
+    return createDateTime;
+  }
+  public void setCreateDateTime(String createDateTime) {
+    this.createDateTime = createDateTime;
+  }
+
+  
+  /**
+   * Type of payment solution that is being used for the transaction.
+   **/
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
+  @JsonProperty("paymentSolution")
+  public String getPaymentSolution() {
+    return paymentSolution;
+  }
+  public void setPaymentSolution(String paymentSolution) {
+    this.paymentSolution = paymentSolution;
   }
 
   
@@ -111,8 +141,12 @@ public class GetRefund   {
     sb.append("  amount: ").append(amount).append("\n");
     sb.append("  currency: ").append(currency).append("\n");
     sb.append("  referenceId: ").append(referenceId).append("\n");
+    sb.append("  createDateTime: ").append(createDateTime).append("\n");
+    sb.append("  paymentSolution: ").append(paymentSolution).append("\n");
     sb.append("  links: ").append(links).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
+
+

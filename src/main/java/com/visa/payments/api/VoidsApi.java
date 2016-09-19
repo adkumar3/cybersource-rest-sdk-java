@@ -9,57 +9,62 @@ import com.visa.payments.TypeRef;
 import java.util.*;
 
 import com.visa.payments.model.AuthorizationLinks;
-import com.visa.payments.model.Sale;
 import com.visa.payments.model.TransactionSearch;
-import com.visa.payments.model.CaptureLinks;
 import com.visa.payments.model.VoidRequest;
 import com.visa.payments.model.CreditCollection;
-import com.visa.payments.model.GetCaptureLinks;
-import com.visa.payments.model.CreditRequest;
 import com.visa.payments.model.AuthCaptureRequest;
-import com.visa.payments.model.GetAuthorizationLinks;
 import com.visa.payments.model.ResponseStatusDetails;
 import com.visa.payments.model.ErrorResource;
 import com.visa.payments.model.TransactionSearchCollection;
-import com.visa.payments.model.SaleLinks;
 import com.visa.payments.model.Capture;
-import com.visa.payments.model.Authorization;
 import com.visa.payments.model.Item;
 import com.visa.payments.model.CaptureCollection;
-import com.visa.payments.model.Credit;
-import com.visa.payments.model.MerchantDescriptor;
 import com.visa.payments.model.BillTo;
-import com.visa.payments.model.RefundLinks;
 import com.visa.payments.model.Void;
 import com.visa.payments.model.GetRefund;
-import com.visa.payments.model.MerchantDefinedData;
 import com.visa.payments.model.GetSale;
 import com.visa.payments.model.GetCredit;
 import com.visa.payments.model.SaleCollection;
-import com.visa.payments.model.TransactionSearchRequest;
-import com.visa.payments.model.CreditLinks;
-import com.visa.payments.model.SelfLink;
 import com.visa.payments.model.AuthorizationCollection;
-import com.visa.payments.model.Error;
-import com.visa.payments.model.RefundCollection;
-import com.visa.payments.model.SearchResult;
 import com.visa.payments.model.CollectionLinks;
-import com.visa.payments.model.GetAuthorization;
 import com.visa.payments.model.Payment;
 import com.visa.payments.model.Refund;
-import com.visa.payments.model.RefundRequest;
 import com.visa.payments.model.Transaction;
 import com.visa.payments.model.ResponseStatus;
-import com.visa.payments.model.Links;
-import com.visa.payments.model.ShipTo;
-import com.visa.payments.model.CaptureRequest;
 import com.visa.payments.model.Link;
 import com.visa.payments.model.GetCapture;
 import com.visa.payments.model.GetSaleLinks;
+import com.visa.payments.model.Sale;
+import com.visa.payments.model.CaptureLinks;
+import com.visa.payments.model.GetCaptureLinks;
+import com.visa.payments.model.CreditRequest;
+import com.visa.payments.model.GetAuthorizationLinks;
+import com.visa.payments.model.ReverseAuthRequest;
+import com.visa.payments.model.SaleLinks;
+import com.visa.payments.model.Authorization;
+import com.visa.payments.model.Credit;
+import com.visa.payments.model.MerchantDescriptor;
+import com.visa.payments.model.RefundLinks;
+import com.visa.payments.model.MerchantDefinedData;
+import com.visa.payments.model.ReversedAuthorization;
+import com.visa.payments.model.TransactionSearchRequest;
+import com.visa.payments.model.CreditLinks;
+import com.visa.payments.model.SelfLink;
+import com.visa.payments.model.Error;
+import com.visa.payments.model.RefundCollection;
+import com.visa.payments.model.SearchResult;
+import com.visa.payments.model.Terminal;
+import com.visa.payments.model.GetAuthorization;
+import com.visa.payments.model.RefundRequest;
+import com.visa.payments.model.Links;
+import com.visa.payments.model.ShipTo;
+import com.visa.payments.model.CaptureRequest;
+
 
 import java.io.File;
 import java.util.Map;
 import java.util.HashMap;
+
 
 public class VoidsApi {
   private ApiClient apiClient;
@@ -78,10 +83,10 @@ public class VoidsApi {
 
   
   /**
-   * Void a capture transaction
+   * Void a particular captured transaction by specifying the capture ID.
    * 
-   * @param id Capture transaction id
-   * @param request Void request data
+   * @param id Capture transaction ID.
+   * @param request Void request data.
    * @return Void
    */
   public Void voidCapture (String id, VoidRequest request) throws ApiException {
@@ -124,10 +129,10 @@ public class VoidsApi {
   }
   
   /**
-   * Void a credit
-   * Void a credit
-   * @param id creditId
-   * @param request Void request data
+   * Void a credit.
+   * Void a credit by specifying the credit ID.
+   * @param id Credit ID.
+   * @param request Request data.
    * @return Void
    */
   public Void voidCredit (String id, VoidRequest request) throws ApiException {
@@ -170,10 +175,10 @@ public class VoidsApi {
   }
   
   /**
-   * Void a refund transaction
+   * Void a refund transaction.
    * 
-   * @param id Refund transaction id
-   * @param request Void request data
+   * @param id Refund transaction ID.
+   * @param request Void request data.
    * @return Void
    */
   public Void voidRefund (String id, VoidRequest request) throws ApiException {
@@ -216,10 +221,10 @@ public class VoidsApi {
   }
   
   /**
-   * Void a sale transaction
+   * Void a particular sale transaction by specifying the sale ID.
    * 
-   * @param id Sales transaction id
-   * @param request Void request data
+   * @param id Sales transaction ID.
+   * @param request Void request data.
    * @return Void
    */
   public Void voidSale (String id, VoidRequest request) throws ApiException {
@@ -262,9 +267,9 @@ public class VoidsApi {
   }
   
   /**
-   * Retrieve a void
+   * Retrieve a void by specifying the void ID.
    * 
-   * @param id Unique identifier for the transaction
+   * @param id Unique identifier for the transaction.
    * @return Void
    */
   public Void getVoid (String id) throws ApiException {
@@ -307,3 +312,4 @@ public class VoidsApi {
   }
   
 }
+

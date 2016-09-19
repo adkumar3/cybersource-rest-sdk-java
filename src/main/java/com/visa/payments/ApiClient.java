@@ -26,11 +26,14 @@ import java.util.TimeZone;
 
 import java.net.URLEncoder;
 
+import java.nio.charset.StandardCharsets;
+
 import java.io.IOException;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 
-import java.security.MessageDigest;
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -483,24 +486,27 @@ public class ApiClient {
 
   private String generateXPayToken(String resourcePath, String queryParams, String body) {
     String timestamp = (System.currentTimeMillis() / 1000L) + "";
-    String preHashString = secretKey + timestamp + resourcePath + queryParams + body;
-    String hash = sha256Digest(preHashString);
-    String token = "x:" + timestamp + ":" + hash;
-    return token;
+    String preHashString = timestamp + resourcePath + queryParams + body;
+    String hash = getDigest(preHashString);
+    return "xv2:" + timestamp + ":" + hash;
   }
 
-  private static String sha256Digest (String data) {
+  private String getDigest(String data) {
     try {
-      MessageDigest mac = MessageDigest.getInstance("SHA-256");
-      mac.update(data.getBytes("UTF-8"));
-      return new String(toHex(mac.digest())).toLowerCase();
+      SecretKeySpec keySpec;
+      keySpec = new SecretKeySpec(secretKey.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
+      Mac sha256HMAC = Mac.getInstance("HmacSHA256");
+      sha256HMAC.init(keySpec);
+      
+      byte[] hashByte = sha256HMAC.doFinal(data.getBytes(StandardCharsets.UTF_8));
+      return toHex(hashByte);      
     } catch (Exception e) {
       return null;
     }
   }
 
-    private static String toHex(byte[] bytes) {
-      BigInteger bi = new BigInteger(1, bytes);
-      return String.format("%0" + (bytes.length << 1) + "X", bi);
-    }
+  private static String toHex(byte[] bytes) {
+    BigInteger bi = new BigInteger(1, bytes);
+    return String.format("%0" + (bytes.length << 1) + "X", bi);
+  }
 }

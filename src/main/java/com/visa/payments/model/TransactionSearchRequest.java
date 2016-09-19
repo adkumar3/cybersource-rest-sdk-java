@@ -3,8 +3,10 @@ package com.visa.payments.model;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -42,9 +44,9 @@ public class TransactionSearchRequest   {
 
   
   /**
-   * This paging parameter is used to specify the page size, i.e. number of records.
+   * This paging parameter specifies the number of records per page.
    **/
-  @ApiModelProperty(value = "This paging parameter is used to specify the page size, i.e. number of records.")
+  @ApiModelProperty(value = "This paging parameter specifies the number of records per page.")
   @JsonProperty("limit")
   public Integer getLimit() {
     return limit;
@@ -67,3 +69,5 @@ public class TransactionSearchRequest   {
     return sb.toString();
   }
 }
+
+

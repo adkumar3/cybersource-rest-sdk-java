@@ -3,8 +3,10 @@ package com.visa.payments.model;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -42,9 +44,9 @@ public class Payment   {
 
   
   /**
-   * Two digit expiration month
+   * Two-digit expiration month
    **/
-  @ApiModelProperty(value = "Two digit expiration month")
+  @ApiModelProperty(value = "Two-digit expiration month")
   @JsonProperty("cardExpirationMonth")
   public String getCardExpirationMonth() {
     return cardExpirationMonth;
@@ -55,9 +57,9 @@ public class Payment   {
 
   
   /**
-   * Four digit expiration year
+   * Four-digit expiration year
    **/
-  @ApiModelProperty(value = "Four digit expiration year")
+  @ApiModelProperty(value = "Four-digit expiration year")
   @JsonProperty("cardExpirationYear")
   public String getCardExpirationYear() {
     return cardExpirationYear;
@@ -81,9 +83,9 @@ public class Payment   {
 
   
   /**
-   * Flag that indicates whether a CVN code was sent
+   * Flag that indicates whether a CVN code was sent.
    **/
-  @ApiModelProperty(value = "Flag that indicates whether a CVN code was sent")
+  @ApiModelProperty(value = "Flag that indicates whether a CVN code was sent.")
   @JsonProperty("cardVerificationIndicator")
   public String getCardVerificationIndicator() {
     return cardVerificationIndicator;
@@ -120,9 +122,9 @@ public class Payment   {
 
   
   /**
-   * Format of the encrypted payment data
+   * Format of the encrypted payment data.
    **/
-  @ApiModelProperty(value = "Format of the encrypted payment data")
+  @ApiModelProperty(value = "Format of the encrypted payment data.")
   @JsonProperty("encryptedDescriptor")
   public String getEncryptedDescriptor() {
     return encryptedDescriptor;
@@ -133,9 +135,9 @@ public class Payment   {
 
   
   /**
-   * Encoding method used to encrypt the payment data
+   * Encoding method used to encrypt the payment data.
    **/
-  @ApiModelProperty(value = "Encoding method used to encrypt the payment data")
+  @ApiModelProperty(value = "Encoding method used to encrypt the payment data.")
   @JsonProperty("encryptedEncoding")
   public String getEncryptedEncoding() {
     return encryptedEncoding;
@@ -146,9 +148,9 @@ public class Payment   {
 
   
   /**
-   * Encrypted key that CyberSource uses to decrypt the payment data
+   * Encrypted key that CyberSource uses to decrypt the payment data.
    **/
-  @ApiModelProperty(value = "Encrypted key that CyberSource uses to decrypt the payment data")
+  @ApiModelProperty(value = "Encrypted key that CyberSource uses to decrypt the payment data.")
   @JsonProperty("encryptedKey")
   public String getEncryptedKey() {
     return encryptedKey;
@@ -159,9 +161,9 @@ public class Payment   {
 
   
   /**
-   * Cryptogram for payment network tokenization transactions. The value for this field must be 28-character base64 or 40-character hex binary
+   * Cryptogram for payment network tokenization transactions. The value for this field must be 28-character base64 or 40-character hex binary.
    **/
-  @ApiModelProperty(value = "Cryptogram for payment network tokenization transactions. The value for this field must be 28-character base64 or 40-character hex binary")
+  @ApiModelProperty(value = "Cryptogram for payment network tokenization transactions. The value for this field must be 28-character base64 or 40-character hex binary.")
   @JsonProperty("cavv")
   public String getCavv() {
     return cavv;
@@ -172,9 +174,9 @@ public class Payment   {
 
   
   /**
-   * Cryptogram for payment network tokenization transactions
+   * Cryptogram for payment network tokenization transactions.
    **/
-  @ApiModelProperty(value = "Cryptogram for payment network tokenization transactions")
+  @ApiModelProperty(value = "Cryptogram for payment network tokenization transactions.")
   @JsonProperty("xid")
   public String getXid() {
     return xid;
@@ -198,9 +200,9 @@ public class Payment   {
 
   
   /**
-   * Required field for payment network tokenization transactions with MasterCard
+   * Required field for payment network tokenization transactions with MasterCard.
    **/
-  @ApiModelProperty(value = "Required field for payment network tokenization transactions with MasterCard")
+  @ApiModelProperty(value = "Required field for payment network tokenization transactions with MasterCard.")
   @JsonProperty("ucafCollectionIndicator")
   public String getUcafCollectionIndicator() {
     return ucafCollectionIndicator;
@@ -211,9 +213,9 @@ public class Payment   {
 
   
   /**
-   * Type of transaction that provided the token data
+   * Type of transaction that provided the token data.
    **/
-  @ApiModelProperty(value = "Type of transaction that provided the token data")
+  @ApiModelProperty(value = "Type of transaction that provided the token data.")
   @JsonProperty("networkTokenTransactionType")
   public String getNetworkTokenTransactionType() {
     return networkTokenTransactionType;
@@ -224,9 +226,9 @@ public class Payment   {
 
   
   /**
-   * Value that identifies your business and indicates that the cardholder’s account number is tokenized
+   * Value that identifies your business and indicates that the cardholderâ€™s account number is tokenized.
    **/
-  @ApiModelProperty(value = "Value that identifies your business and indicates that the cardholder’s account number is tokenized")
+  @ApiModelProperty(value = "Value that identifies your business and indicates that the cardholderâ€™s account number is tokenized.")
   @JsonProperty("networkTokenRequestorId")
   public String getNetworkTokenRequestorId() {
     return networkTokenRequestorId;
@@ -262,3 +264,5 @@ public class Payment   {
     return sb.toString();
   }
 }
+
+

@@ -12,8 +12,10 @@ import com.visa.payments.model.MerchantDefinedData;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -43,9 +45,9 @@ public class Sale   {
 
   
   /**
-   * Unique identifier for the transaction
+   * Unique identifier for the transaction.
    **/
-  @ApiModelProperty(value = "Unique identifier for the transaction")
+  @ApiModelProperty(value = "Unique identifier for the transaction.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -56,9 +58,9 @@ public class Sale   {
 
   
   /**
-   * Status of the transaction
+   * Status of the transaction.
    **/
-  @ApiModelProperty(value = "Status of the transaction")
+  @ApiModelProperty(value = "Status of the transaction.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -69,9 +71,9 @@ public class Sale   {
 
   
   /**
-   * Amount for the transaction
+   * Amount for the transaction.
    **/
-  @ApiModelProperty(value = "Amount for the transaction")
+  @ApiModelProperty(value = "Amount for the transaction.")
   @JsonProperty("amount")
   public BigDecimal getAmount() {
     return amount;
@@ -82,9 +84,9 @@ public class Sale   {
 
   
   /**
-   * Currency used for the transaction
+   * Currency used for the transaction.
    **/
-  @ApiModelProperty(value = "Currency used for the transaction")
+  @ApiModelProperty(value = "Currency used for the transaction.")
   @JsonProperty("currency")
   public String getCurrency() {
     return currency;
@@ -95,9 +97,9 @@ public class Sale   {
 
   
   /**
-   * Authorization code for the transaction
+   * Authorization code for the transaction.
    **/
-  @ApiModelProperty(value = "Authorization code for the transaction")
+  @ApiModelProperty(value = "Authorization code for the transaction.")
   @JsonProperty("authCode")
   public String getAuthCode() {
     return authCode;
@@ -108,9 +110,9 @@ public class Sale   {
 
   
   /**
-   * Merchant reference ID for the transaction
+   * Merchant reference ID for the transaction.
    **/
-  @ApiModelProperty(value = "Merchant reference ID for the transaction")
+  @ApiModelProperty(value = "Merchant reference ID for the transaction.")
   @JsonProperty("referenceId")
   public String getReferenceId() {
     return referenceId;
@@ -121,9 +123,9 @@ public class Sale   {
 
   
   /**
-   * Setting to ignore Avs
+   * Setting to ignore AVS.
    **/
-  @ApiModelProperty(value = "Setting to ignore Avs")
+  @ApiModelProperty(value = "Setting to ignore AVS.")
   @JsonProperty("ignoreAvs")
   public String getIgnoreAvs() {
     return ignoreAvs;
@@ -134,9 +136,9 @@ public class Sale   {
 
   
   /**
-   * Setting to ignore bad CVN
+   * Setting to ignore bad CVN.
    **/
-  @ApiModelProperty(value = "Setting to ignore bad CVN")
+  @ApiModelProperty(value = "Setting to ignore bad CVN.")
   @JsonProperty("ignoreBadCvn")
   public String getIgnoreBadCvn() {
     return ignoreBadCvn;
@@ -160,9 +162,9 @@ public class Sale   {
 
   
   /**
-   * Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout
+   * Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.
    **/
-  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callIDfield from Visa Checkout")
+  @ApiModelProperty(value = "Identifier for the Visa Checkout order. Obtain this value from the callID field from Visa Checkout.")
   @JsonProperty("vcOrderId")
   public String getVcOrderId() {
     return vcOrderId;
@@ -173,9 +175,9 @@ public class Sale   {
 
   
   /**
-   * Type of payment solution that is being used for the transaction
+   * Type of payment solution that is being used for the transaction.
    **/
-  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction")
+  @ApiModelProperty(value = "Type of payment solution that is being used for the transaction.")
   @JsonProperty("paymentSolution")
   public String getPaymentSolution() {
     return paymentSolution;
@@ -297,3 +299,5 @@ public class Sale   {
     return sb.toString();
   }
 }
+
+

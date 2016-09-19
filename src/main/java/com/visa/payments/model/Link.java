@@ -3,8 +3,10 @@ package com.visa.payments.model;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -16,9 +18,9 @@ public class Link   {
 
   
   /**
-   * URI of the linked resource
+   * URI of the linked resource.
    **/
-  @ApiModelProperty(value = "URI of the linked resource")
+  @ApiModelProperty(value = "URI of the linked resource.")
   @JsonProperty("href")
   public String getHref() {
     return href;
@@ -29,9 +31,9 @@ public class Link   {
 
   
   /**
-   * Label of the linked resource
+   * Label of the linked resource.
    **/
-  @ApiModelProperty(value = "Label of the linked resource")
+  @ApiModelProperty(value = "Label of the linked resource.")
   @JsonProperty("title")
   public String getTitle() {
     return title;
@@ -42,9 +44,9 @@ public class Link   {
 
   
   /**
-   * HTTP method of the linked resource
+   * HTTP method of the linked resource.
    **/
-  @ApiModelProperty(value = "HTTP method of the linked resource")
+  @ApiModelProperty(value = "HTTP method of the linked resource.")
   @JsonProperty("method")
   public String getMethod() {
     return method;
@@ -67,3 +69,5 @@ public class Link   {
     return sb.toString();
   }
 }
+
+

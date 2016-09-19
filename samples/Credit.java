@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import com.visa.payments.ApiException;
@@ -16,6 +17,7 @@ public class Credit {
 		builder.setApiKey("apikey")
 			.setSecretKey("secretkey")
 			.setTimeoutMilliseconds(30000);
+		String nextYear = Integer.toString((Calendar.getInstance().get(Calendar.YEAR) + 1));
 
 		Configuration config = builder.build();
 		CreditsApi creditApi = new CreditsApi(config);
@@ -24,7 +26,7 @@ public class Credit {
 		Payment payment = new Payment();
 		payment.setCardNumber("4111111111111111");
 		payment.setCardExpirationMonth("10");
-		payment.setCardExpirationYear("2016");
+		payment.setCardExpirationYear(nextYear);
 
 		creditRequest.setPayment(payment);
 		creditRequest.setAmount(new BigDecimal(5.00));

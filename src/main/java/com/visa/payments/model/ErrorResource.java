@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 
 
 
+
 import io.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @ApiModel(description = "")
@@ -23,9 +25,9 @@ public class ErrorResource   {
 
   
   /**
-   * Correlation ID
+   * Correlation ID.
    **/
-  @ApiModelProperty(value = "Correlation ID")
+  @ApiModelProperty(value = "Correlation ID.")
   @JsonProperty("correlationId")
   public String getCorrelationId() {
     return correlationId;
@@ -49,9 +51,9 @@ public class ErrorResource   {
 
   
   /**
-   * HTTP Status code
+   * HTTP Status code.
    **/
-  @ApiModelProperty(value = "HTTP Status code")
+  @ApiModelProperty(value = "HTTP Status code.")
   @JsonProperty("status")
   public BigDecimal getStatus() {
     return status;
@@ -62,9 +64,9 @@ public class ErrorResource   {
 
   
   /**
-   * API resource
+   * API resource.
    **/
-  @ApiModelProperty(value = "API resource")
+  @ApiModelProperty(value = "API resource.")
   @JsonProperty("resource")
   public String getResource() {
     return resource;
@@ -75,9 +77,9 @@ public class ErrorResource   {
 
   
   /**
-   * HTTP Method
+   * HTTP Method.
    **/
-  @ApiModelProperty(value = "HTTP Method")
+  @ApiModelProperty(value = "HTTP Method.")
   @JsonProperty("method")
   public String getMethod() {
     return method;
@@ -88,9 +90,9 @@ public class ErrorResource   {
 
   
   /**
-   * Original request when the error happened
+   * Original request when the error occurred.
    **/
-  @ApiModelProperty(value = "Original request when the error happened")
+  @ApiModelProperty(value = "Original request when the error occurred.")
   @JsonProperty("originalRequest")
   public String getOriginalRequest() {
     return originalRequest;
@@ -101,9 +103,9 @@ public class ErrorResource   {
 
   
   /**
-   * Original response when the error happened
+   * Original response when the error occurred.
    **/
-  @ApiModelProperty(value = "Original response when the error happened")
+  @ApiModelProperty(value = "Original response when the error occurred.")
   @JsonProperty("originalResponse")
   public String getOriginalResponse() {
     return originalResponse;
@@ -143,3 +145,5 @@ public class ErrorResource   {
     return sb.toString();
   }
 }
+
+

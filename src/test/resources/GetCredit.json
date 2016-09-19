@@ -4,6 +4,8 @@
     "amount":20.99,
     "currency":"USD",
     "referenceId":"refNumber123455667",
+    "createDateTime": "946684800",
+    "paymentSolution": "001",
     "payment":{
         "cardNumber":"xxxxxxxxxxxx1111",
         "cardExpirationMonth":"10",
