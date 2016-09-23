@@ -7,7 +7,6 @@ import com.sun.jersey.api.client.WebResource.Builder;
 
 import javax.ws.rs.core.Response.Status.Family;
 
-
 import java.math.BigInteger;
 
 import java.util.Collection;
@@ -21,6 +20,7 @@ import java.util.TimeZone;
 
 import java.net.URLEncoder;
 
+import java.nio.charset.StandardCharsets;
 
 import java.io.UnsupportedEncodingException;
 
@@ -29,6 +29,8 @@ import javax.crypto.spec.SecretKeySpec;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+
+
 
 public class ApiClient {
   private static final int DEFAULT_CONNECTION_TIMEOUT = 30000;
@@ -484,11 +486,11 @@ public class ApiClient {
   private String getDigest(String data) {
     try {
       SecretKeySpec keySpec;
-      keySpec = new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256");
+      keySpec = new SecretKeySpec(secretKey.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
       Mac sha256HMAC = Mac.getInstance("HmacSHA256");
       sha256HMAC.init(keySpec);
       
-      byte[] hashByte = sha256HMAC.doFinal(data.getBytes("UTF-8"));
+      byte[] hashByte = sha256HMAC.doFinal(data.getBytes(StandardCharsets.UTF_8));
       return toHex(hashByte);      
     } catch (Exception e) {
       return null;
