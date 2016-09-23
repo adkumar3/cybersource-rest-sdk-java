@@ -1,8 +1,21 @@
 # Cybersource REST API Library for Java
-[![Build Status](https://travis-ci.org/CyberSource/cybersource-rest-sdk-java.png?branch=master)]
+[![Build Status](https://travis-ci.org/CyberSource/cybersource-rest-sdk-java.png?branch=Future)]
 (https://travis-ci.org/CyberSource/cybersource-rest-sdk-java)
 
-Java client bindings for the CyberSource REST API. Documentation for the CyberSource Payments REST API can be found [here](https://vdp.visa.com/products/cybersource/reference#cybersource).
+Java client bindings for the CyberSource REST API. Documentation for the CyberSource Payments REST API can be found [here](https://vdp.visa.com/products/cybersource/reference).
+
+##Package Managers
+
+### Maven
+To install the cybersource-sdk-java from central repository,add dependency to your application pom.xml as below.
+````
+        <dependency>
+            <groupId>com.visa</groupId>
+            <artifactId>rest-sdk-java</artifactId>
+            <version>1.0.0</version>
+        </dependency> 
+````
+ Run mvn install, to install dependency
 
 ## Requirements
 1. Java SDK 1.6 and later  
