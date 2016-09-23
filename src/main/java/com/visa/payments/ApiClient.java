@@ -2,20 +2,15 @@ package com.visa.payments;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.client.filter.LoggingFilter;
 import com.sun.jersey.api.client.WebResource.Builder;
 
-import com.sun.jersey.multipart.file.FileDataBodyPart;
-
 import javax.ws.rs.core.Response.Status.Family;
-import javax.ws.rs.core.MediaType;
+
 
 import java.math.BigInteger;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.HashMap;
@@ -26,10 +21,7 @@ import java.util.TimeZone;
 
 import java.net.URLEncoder;
 
-import java.nio.charset.StandardCharsets;
 
-import java.io.IOException;
-import java.io.File;
 import java.io.UnsupportedEncodingException;
 
 import javax.crypto.Mac;
@@ -37,8 +29,6 @@ import javax.crypto.spec.SecretKeySpec;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.text.ParseException;
-
 
 public class ApiClient {
   private static final int DEFAULT_CONNECTION_TIMEOUT = 30000;
@@ -494,11 +484,11 @@ public class ApiClient {
   private String getDigest(String data) {
     try {
       SecretKeySpec keySpec;
-      keySpec = new SecretKeySpec(secretKey.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
+      keySpec = new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA256");
       Mac sha256HMAC = Mac.getInstance("HmacSHA256");
       sha256HMAC.init(keySpec);
       
-      byte[] hashByte = sha256HMAC.doFinal(data.getBytes(StandardCharsets.UTF_8));
+      byte[] hashByte = sha256HMAC.doFinal(data.getBytes("UTF-8"));
       return toHex(hashByte);      
     } catch (Exception e) {
       return null;
