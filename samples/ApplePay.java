@@ -36,6 +36,11 @@ public class ApplePay {
         authCaptureRequest.setCurrency("USD");
         authCaptureRequest.setReferenceId("123");
 
+        // Identifies Apple Pay as the payment solution that is being used for the transaction:
+        // Set the value for this field to 001.
+        // Note This unique ID differentiates digital solution transactions within the CyberSource platform for reporting purposes.
+        authCaptureRequest.setPaymentSolution("001");
+        
         try {
             // Perform an authorization
             Authorization auth = authApi.createAuthorization(authCaptureRequest);
@@ -55,6 +60,8 @@ public class ApplePay {
             captureRequest.setAmount(new BigDecimal(5.00));
             captureRequest.setCurrency("USD");
             captureRequest.setReferenceId("123");
+            captureRequest.setPaymentSolution("001");
+            
             Capture capture = captureApi.captureAuthorization(id, captureRequest);
             System.out.println("Capture output against authorization: " + capture);
         } catch (ApiException e) {
