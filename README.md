@@ -18,7 +18,7 @@ To install the cybersource-sdk-java from central repository,add dependency to yo
  Run mvn install, to install dependency
 
 ## Requirements
-1. Java SDK 1.6 and later  
+1. Java SDK 1.8  
 2. Maven 3 and later  
 3. A [VDP](https://vdp.visa.com) account with CyberSource enabled
     
