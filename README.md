@@ -32,7 +32,7 @@ builder.setApiKey("apikey")
 
 If you've already built the SDK with Maven, you can build the samples from the main directory. Just run:
 ```
-javac -cp target/rest-sdk-java-1.0.0.jar samples/*.java
+javac -cp target/rest-sdk-java-1.0.0-SNAPSHOT.jar samples/*.java
 ```
 
 You can then run the samples from the same directory. For example, here's the command to run the SearchPayment example (if you're on Windows, change the path separator from ````:```` to ````;````):
