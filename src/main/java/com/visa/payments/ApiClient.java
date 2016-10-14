@@ -2,20 +2,14 @@ package com.visa.payments;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.client.filter.LoggingFilter;
 import com.sun.jersey.api.client.WebResource.Builder;
 
-import com.sun.jersey.multipart.file.FileDataBodyPart;
-
 import javax.ws.rs.core.Response.Status.Family;
-import javax.ws.rs.core.MediaType;
 
 import java.math.BigInteger;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.HashMap;
@@ -28,8 +22,6 @@ import java.net.URLEncoder;
 
 import java.nio.charset.StandardCharsets;
 
-import java.io.IOException;
-import java.io.File;
 import java.io.UnsupportedEncodingException;
 
 import javax.crypto.Mac;
@@ -37,7 +29,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.text.ParseException;
+
 
 
 public class ApiClient {
