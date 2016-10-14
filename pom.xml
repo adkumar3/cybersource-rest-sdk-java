@@ -123,7 +123,7 @@
             <activeByDefault>true</activeByDefault>
         </activation>
         <build>
-            <finalName>rest-sdk-java</finalName>
+           <!-- <finalName>rest-sdk-java</finalName>-->
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
