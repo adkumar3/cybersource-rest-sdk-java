@@ -14,10 +14,10 @@ public class Sale {
 	public static void main(String[] args) {
 		// Set ApiKey, secretKey and timeoutMilliseconds
 		ConfigurationBuilder builder = new ConfigurationBuilder();
-		builder.setApiKey("apikey")
-			.setSecretKey("secretkey")
-			.setTimeoutMilliseconds(30000);
-		String nextYear = Integer.toString((Calendar.getInstance().get(Calendar.YEAR) + 1));
+		builder.setApiKey("apikey").setSecretKey("secretkey")
+				.setTimeoutMilliseconds(30000);
+		String nextYear = Integer.toString((Calendar.getInstance().get(
+				Calendar.YEAR) + 1));
 
 		Configuration config = builder.build();
 		SalesApi saleApi = new SalesApi(config);
@@ -37,10 +37,14 @@ public class Sale {
 			// Perform a sale
 			com.visa.payments.model.Sale sale = saleApi.createSale(authRequest);
 			String saleId = sale.getId();
-			System.out.println("Sale created and returned with saleId: " + saleId);
-			
+			System.out.println("Sale created and returned with saleId: "
+					+ saleId);
+
+			// Please note that there could be a delay for the transaction
+			// detail to be available for retrieval after a requests is posted
+			// to the server for processing.
 			TimeUnit.SECONDS.sleep(2);
-			
+
 			// Retrieve a sale
 			GetSale getSale = saleApi.getSale(saleId);
 			System.out.println("Retrieve a sale: " + getSale);
