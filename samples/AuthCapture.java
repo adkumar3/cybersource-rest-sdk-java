@@ -18,10 +18,10 @@ public class AuthCapture {
 	public static void main(String[] args) {
 		// Set ApiKey, secretKey and timeoutMilliseconds
 		ConfigurationBuilder builder = new ConfigurationBuilder();
-                builder.setApiKey("apikey")
-                        .setSecretKey("secretkey")
-			.setTimeoutMilliseconds(30000);
-		String nextYear = Integer.toString((Calendar.getInstance().get(Calendar.YEAR) + 1));
+		builder.setApiKey("apikey").setSecretKey("secretkey")
+				.setTimeoutMilliseconds(30000);
+		String nextYear = Integer.toString((Calendar.getInstance().get(
+				Calendar.YEAR) + 1));
 
 		Configuration config = builder.build();
 		AuthorizationsApi authApi = new AuthorizationsApi(config);
@@ -40,23 +40,32 @@ public class AuthCapture {
 
 		try {
 			// Perform an authorization
-			Authorization auth = authApi.createAuthorization(authCaptureRequest);
+			Authorization auth = authApi
+					.createAuthorization(authCaptureRequest);
 			String id = auth.getId();
-			System.out.println("Authorization created and returned with authId: " + id);
-			
+			System.out
+					.println("Authorization created and returned with authId: "
+							+ id);
+
+			// Please note that there could be a delay for the transaction
+			// detail to be available for retrieval after a requests is posted
+			// to the server for processing.
 			TimeUnit.SECONDS.sleep(2);
-			
+
 			// Retrieve an authorization
 			GetAuthorization getAuth = authApi.getAuthorization(id);
-			System.out.println("Retrieve authorization with authId '" + id + "': " + getAuth);
-						
+			System.out.println("Retrieve authorization with authId '" + id
+					+ "': " + getAuth);
+
 			// Perform a capture against an authorization
 			CaptureRequest captureRequest = new CaptureRequest();
 			captureRequest.setAmount(new BigDecimal(5.00));
 			captureRequest.setCurrency("USD");
 			captureRequest.setReferenceId("123");
-			Capture capture = captureApi.captureAuthorization(id, captureRequest);
-			System.out.println("Capture output against authorization: " + capture);
+			Capture capture = captureApi.captureAuthorization(id,
+					captureRequest);
+			System.out.println("Capture output against authorization: "
+					+ capture);
 		} catch (ApiException e) {
 			System.out.println(e.getMessage());
 		} catch (Exception e) {

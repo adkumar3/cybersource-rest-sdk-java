@@ -14,10 +14,10 @@ public class SearchPayment {
 	public static void main(String[] args) {
 		// Set ApiKey, secretKey and timeoutMilliseconds
 		ConfigurationBuilder builder = new ConfigurationBuilder();
-                builder.setApiKey("apikey")
-                                .setSecretKey("secretkey")
+		builder.setApiKey("apikey").setSecretKey("secretkey")
 				.setTimeoutMilliseconds(30000);
-		String nextYear = Integer.toString((Calendar.getInstance().get(Calendar.YEAR) + 1));
+		String nextYear = Integer.toString((Calendar.getInstance().get(
+				Calendar.YEAR) + 1));
 
 		Configuration config = builder.build();
 		PaymentsApi paymentApi = new PaymentsApi(config);
@@ -37,7 +37,8 @@ public class SearchPayment {
 			// Search for a transaction
 			TransactionSearchRequest request = new TransactionSearchRequest();
 			request.setQuery("accountSuffix=1111");
-			TransactionSearchCollection collection = paymentApi.searchPayment(request, null, null);
+			TransactionSearchCollection collection = paymentApi.searchPayment(
+					request, null, null);
 			System.out.println("Search payment collection: " + collection);
 		} catch (ApiException e) {
 			System.out.println(e.getMessage());

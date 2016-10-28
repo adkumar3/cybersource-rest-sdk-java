@@ -14,10 +14,10 @@ public class Credit {
 	public static void main(String[] args) {
 		// Set ApiKey, secretKey and timeoutMilliseconds
 		ConfigurationBuilder builder = new ConfigurationBuilder();
-		builder.setApiKey("apikey")
-			.setSecretKey("secretkey")
-			.setTimeoutMilliseconds(30000);
-		String nextYear = Integer.toString((Calendar.getInstance().get(Calendar.YEAR) + 1));
+		builder.setApiKey("apikey").setSecretKey("secretkey")
+				.setTimeoutMilliseconds(30000);
+		String nextYear = Integer.toString((Calendar.getInstance().get(
+				Calendar.YEAR) + 1));
 
 		Configuration config = builder.build();
 		CreditsApi creditApi = new CreditsApi(config);
@@ -34,12 +34,17 @@ public class Credit {
 
 		try {
 			// Perform a credit
-			com.visa.payments.model.Credit credit = creditApi.createCredit(creditRequest);
+			com.visa.payments.model.Credit credit = creditApi
+					.createCredit(creditRequest);
 			String creditId = credit.getId();
-			System.out.println("Credit created and returned with creditId: " + creditId);
-			
+			System.out.println("Credit created and returned with creditId: "
+					+ creditId);
+
+			// Please note that there could be a delay for the transaction
+			// detail to be available for retrieval after a requests is posted
+			// to the server for processing.
 			TimeUnit.SECONDS.sleep(2);
-			
+
 			// Retrieve a credit
 			GetCredit getCredit = creditApi.getCredit(creditId);
 			System.out.println("Retrieve a credit: " + getCredit);
