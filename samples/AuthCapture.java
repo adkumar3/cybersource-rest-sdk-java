@@ -2,17 +2,17 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-import com.visa.payments.ApiException;
-import com.visa.payments.Configuration;
-import com.visa.payments.Configuration.ConfigurationBuilder;
-import com.visa.payments.model.AuthCaptureRequest;
-import com.visa.payments.model.Authorization;
-import com.visa.payments.model.Capture;
-import com.visa.payments.model.CaptureRequest;
-import com.visa.payments.model.GetAuthorization;
-import com.visa.payments.model.Payment;
-import com.visa.payments.api.AuthorizationsApi;
-import com.visa.payments.api.CapturesApi;
+import com.cybersource.payments.ApiException;
+import com.cybersource.payments.Configuration;
+import com.cybersource.payments.Configuration.ConfigurationBuilder;
+import com.cybersource.payments.model.AuthCaptureRequest;
+import com.cybersource.payments.model.Authorization;
+import com.cybersource.payments.model.Capture;
+import com.cybersource.payments.model.CaptureRequest;
+import com.cybersource.payments.model.GetAuthorization;
+import com.cybersource.payments.model.Payment;
+import com.cybersource.payments.api.AuthorizationsApi;
+import com.cybersource.payments.api.CapturesApi;
 
 public class AuthCapture {
 	public static void main(String[] args) {

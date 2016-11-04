@@ -2,15 +2,15 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-import com.visa.payments.ApiException;
-import com.visa.payments.Configuration;
-import com.visa.payments.Configuration.ConfigurationBuilder;
-import com.visa.payments.model.AuthCaptureRequest;
-import com.visa.payments.model.GetRefund;
-import com.visa.payments.model.Payment;
-import com.visa.payments.model.RefundRequest;
-import com.visa.payments.api.SalesApi;
-import com.visa.payments.api.RefundsApi;
+import com.cybersource.payments.ApiException;
+import com.cybersource.payments.Configuration;
+import com.cybersource.payments.Configuration.ConfigurationBuilder;
+import com.cybersource.payments.model.AuthCaptureRequest;
+import com.cybersource.payments.model.GetRefund;
+import com.cybersource.payments.model.Payment;
+import com.cybersource.payments.model.RefundRequest;
+import com.cybersource.payments.api.SalesApi;
+import com.cybersource.payments.api.RefundsApi;
 
 public class Refund {
 	public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class Refund {
 
 		try {
 			// Perform a sale
-			com.visa.payments.model.Sale sale = saleApi.createSale(request);
+			com.cybersource.payments.model.Sale sale = saleApi.createSale(request);
 			String saleId = sale.getId();
 			System.out.println("Sale created and returned with saleId: "
 					+ saleId);
@@ -51,7 +51,7 @@ public class Refund {
 			RefundRequest refundRequest = new RefundRequest();
 			refundRequest.setAmount(new BigDecimal(5.00));
 			refundRequest.setReferenceId("123");
-			com.visa.payments.model.Refund refund = refundApi.refundSale(
+			com.cybersource.payments.model.Refund refund = refundApi.refundSale(
 					saleId, refundRequest);
 			System.out.println("Sale refunded: " + refund);
 

@@ -2,14 +2,14 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-import com.visa.payments.ApiException;
-import com.visa.payments.Configuration;
-import com.visa.payments.Configuration.ConfigurationBuilder;
-import com.visa.payments.model.AuthCaptureRequest;
-import com.visa.payments.model.Payment;
-import com.visa.payments.model.VoidRequest;
-import com.visa.payments.api.SalesApi;
-import com.visa.payments.api.VoidsApi;
+import com.cybersource.payments.ApiException;
+import com.cybersource.payments.Configuration;
+import com.cybersource.payments.Configuration.ConfigurationBuilder;
+import com.cybersource.payments.model.AuthCaptureRequest;
+import com.cybersource.payments.model.Payment;
+import com.cybersource.payments.model.VoidRequest;
+import com.cybersource.payments.api.SalesApi;
+import com.cybersource.payments.api.VoidsApi;
 
 public class Void {
 	public static void main(String[] args) {
@@ -37,7 +37,7 @@ public class Void {
 
 		try {
 			// Perform a sale
-			com.visa.payments.model.Sale sale = saleApi.createSale(authRequest);
+			com.cybersource.payments.model.Sale sale = saleApi.createSale(authRequest);
 			String saleId = sale.getId();
 			System.out.println("Sale created and returned with saleId: "
 					+ saleId);
@@ -50,7 +50,7 @@ public class Void {
 			// Void a sale
 			VoidRequest voidRequest = new VoidRequest();
 			voidRequest.setReferenceId("123");
-			com.visa.payments.model.Void voidOutput = voidApi.voidSale(saleId,
+			com.cybersource.payments.model.Void voidOutput = voidApi.voidSale(saleId,
 					voidRequest);
 			System.out.println("Void a sale: " + voidOutput);
 		} catch (ApiException e) {
