@@ -1,5 +1,3 @@
-package com.cybersource.payments.samples;
-
 import com.cybersource.payments.ApiException;
 import com.cybersource.payments.Configuration;
 import com.cybersource.payments.Configuration.ConfigurationBuilder;
