@@ -6,7 +6,7 @@
       <artifactId>oss-parent</artifactId>
       <version>7</version>
   </parent>
-  <groupId>com.visa</groupId>
+  <groupId>com.cybersource</groupId>
   <artifactId>rest-sdk-java</artifactId>
   <packaging>jar</packaging>
   <name>rest-sdk-java</name>

@@ -2,16 +2,16 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-import com.visa.payments.ApiException;
-import com.visa.payments.Configuration;
-import com.visa.payments.Configuration.ConfigurationBuilder;
-import com.visa.payments.model.AuthCaptureRequest;
-import com.visa.payments.model.ReverseAuthRequest;
-import com.visa.payments.model.Authorization;
-import com.visa.payments.model.ReversedAuthorization;
-import com.visa.payments.model.Payment;
-import com.visa.payments.api.AuthorizationsApi;
-import com.visa.payments.api.ReversalsApi;
+import com.cybersource.payments.ApiException;
+import com.cybersource.payments.Configuration;
+import com.cybersource.payments.Configuration.ConfigurationBuilder;
+import com.cybersource.payments.model.AuthCaptureRequest;
+import com.cybersource.payments.model.ReverseAuthRequest;
+import com.cybersource.payments.model.Authorization;
+import com.cybersource.payments.model.ReversedAuthorization;
+import com.cybersource.payments.model.Payment;
+import com.cybersource.payments.api.AuthorizationsApi;
+import com.cybersource.payments.api.ReversalsApi;
 
 public class AuthReversal {
 	public static void main(String[] args) {
