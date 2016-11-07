@@ -1,14 +1,14 @@
 import java.math.BigDecimal;
 import java.util.Calendar;
 
-import com.visa.payments.ApiException;
-import com.visa.payments.Configuration;
-import com.visa.payments.Configuration.ConfigurationBuilder;
-import com.visa.payments.model.AuthCaptureRequest;
-import com.visa.payments.model.Payment;
-import com.visa.payments.model.TransactionSearchRequest;
-import com.visa.payments.model.TransactionSearchCollection;
-import com.visa.payments.api.PaymentsApi;
+import com.cybersource.payments.ApiException;
+import com.cybersource.payments.Configuration;
+import com.cybersource.payments.Configuration.ConfigurationBuilder;
+import com.cybersource.payments.model.AuthCaptureRequest;
+import com.cybersource.payments.model.Payment;
+import com.cybersource.payments.model.TransactionSearchRequest;
+import com.cybersource.payments.model.TransactionSearchCollection;
+import com.cybersource.payments.api.PaymentsApi;
 
 public class SearchPayment {
 	public static void main(String[] args) {

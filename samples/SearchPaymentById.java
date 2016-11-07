@@ -1,10 +1,8 @@
-package com.visa.payments.samples;
-
-import com.visa.payments.ApiException;
-import com.visa.payments.Configuration;
-import com.visa.payments.Configuration.ConfigurationBuilder;
-import com.visa.payments.model.Transaction;
-import com.visa.payments.api.PaymentsApi;
+import com.cybersource.payments.ApiException;
+import com.cybersource.payments.Configuration;
+import com.cybersource.payments.Configuration.ConfigurationBuilder;
+import com.cybersource.payments.model.Transaction;
+import com.cybersource.payments.api.PaymentsApi;
 
 public class SearchPaymentById {
 	public static void main(String[] args) {

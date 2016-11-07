@@ -2,13 +2,13 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-import com.visa.payments.ApiException;
-import com.visa.payments.Configuration;
-import com.visa.payments.Configuration.ConfigurationBuilder;
-import com.visa.payments.model.AuthCaptureRequest;
-import com.visa.payments.model.GetSale;
-import com.visa.payments.model.Payment;
-import com.visa.payments.api.SalesApi;
+import com.cybersource.payments.ApiException;
+import com.cybersource.payments.Configuration;
+import com.cybersource.payments.Configuration.ConfigurationBuilder;
+import com.cybersource.payments.model.AuthCaptureRequest;
+import com.cybersource.payments.model.GetSale;
+import com.cybersource.payments.model.Payment;
+import com.cybersource.payments.api.SalesApi;
 
 public class Sale {
 	public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Sale {
 
 		try {
 			// Perform a sale
-			com.visa.payments.model.Sale sale = saleApi.createSale(authRequest);
+			com.cybersource.payments.model.Sale sale = saleApi.createSale(authRequest);
 			String saleId = sale.getId();
 			System.out.println("Sale created and returned with saleId: "
 					+ saleId);

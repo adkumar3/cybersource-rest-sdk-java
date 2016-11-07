@@ -2,13 +2,13 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-import com.visa.payments.ApiException;
-import com.visa.payments.Configuration;
-import com.visa.payments.Configuration.ConfigurationBuilder;
-import com.visa.payments.model.CreditRequest;
-import com.visa.payments.model.GetCredit;
-import com.visa.payments.model.Payment;
-import com.visa.payments.api.CreditsApi;
+import com.cybersource.payments.ApiException;
+import com.cybersource.payments.Configuration;
+import com.cybersource.payments.Configuration.ConfigurationBuilder;
+import com.cybersource.payments.model.CreditRequest;
+import com.cybersource.payments.model.GetCredit;
+import com.cybersource.payments.model.Payment;
+import com.cybersource.payments.api.CreditsApi;
 
 public class Credit {
 	public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class Credit {
 
 		try {
 			// Perform a credit
-			com.visa.payments.model.Credit credit = creditApi
+			com.cybersource.payments.model.Credit credit = creditApi
 					.createCredit(creditRequest);
 			String creditId = credit.getId();
 			System.out.println("Credit created and returned with creditId: "

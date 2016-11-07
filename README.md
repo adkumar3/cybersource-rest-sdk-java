@@ -10,7 +10,7 @@ Java client bindings for the CyberSource REST API. Documentation for the CyberSo
 To install the cybersource-sdk-java from central repository,add dependency to your application pom.xml as below.
 ````
         <dependency>
-            <groupId>com.visa</groupId>
+            <groupId>com.cybersource</groupId>
             <artifactId>rest-sdk-java</artifactId>
             <version>1.0.0</version>
         </dependency> 
