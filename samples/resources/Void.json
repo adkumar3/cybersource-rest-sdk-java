@@ -1,0 +1,13 @@
+{
+    "id":"4458972752635000001540",
+    "status":"Voided",
+    "amount":501,
+    "currency":"USD",
+    "referenceId":"8645",
+    "_links":{
+        "self":{
+            "href":"https://api.visa.com/cybersource/payments/v1/voids/4458972752635000001540",
+            "method":"GET"
+        }
+    }
+}
