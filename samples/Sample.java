@@ -35,7 +35,7 @@ import com.cybersource.payments.model.Sale;
 import com.cybersource.payments.model.VoidRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Sample {
+public class Sample{
 
 	public static void main(String[] args) {
 		String argument = Arrays.toString(args);
@@ -48,6 +48,7 @@ public class Sample {
 		String nextYear = Integer.toString((Calendar.getInstance().get(
 				Calendar.YEAR) + 1));
 
+		
 		Configuration config = builder.build();
 		AuthorizationsApi authApi = new AuthorizationsApi(config);
 		CapturesApi captureApi = new CapturesApi(config);
