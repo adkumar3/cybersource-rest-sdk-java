@@ -44,35 +44,32 @@ java -cp target/lib/*:target/*:./samples/ SearchPayment
 ```
 
 ### Authorization and Capture (Credit Card) Example
-```java
-AuthCaptureRequest authRequest = new AuthCaptureRequest();
-Payment payment = new Payment();
-payment.setCardNumber("4111111111111110");
-payment.setCardExpirationMonth("10");
-payment.setCardExpirationYear("2016");
+case "AuthCapture":
+			try {
+				AuthCaptureRequest authCaptureRequest1 = mapper
+						.readValue(
+								new File(Thread.currentThread()
+										.getContextClassLoader()
+										.getResource("AuthCaptureRequest.json") // map json to AuthCaptureRequest.class
+										.toURI()), AuthCaptureRequest.class);
+				// Perform an authorization
+				
+				Authorization auth = authApi
+						.createAuthorization(authCaptureRequest1);
+				String id = auth.getId();
+				System.out
+						.println("Authorization created and returned with authId: "
+								+ id);
 
-authRequest.setPayment(payment);
-authRequest.setAmount(new BigDecimal(5.00));
-authRequest.setCurrency("USD");
-authRequest.setReferenceId("123");
-
-// Perform an authorization
-try {
-    Authorization auth = authApi.createAuthorization(authRequest);
-    String authId = auth.getId();
-    System.out.print("Authorization created and returned with authId: " + authId);
-  
-    // Perform a capture against the previous authorization
-    CaptureRequest captureRequest = new CaptureRequest();
-    captureRequest.setAmount(new BigDecimal(5.00));
-    captureRequest.setCurrency("USD");
-    captureRequest.setReferenceId("123");
-    Capture capture = captureApi.captureAuthorization(authId, captureRequest);
-    System.out.println("Capture authorization: " + capture);
-} catch(ApiException e) {
-   System.out.println(e.getMessage());
-}
-```
+				CaptureRequest authCapture = mapper.readValue(
+						new File(Thread.currentThread().getContextClassLoader()
+								.getResource("CaptureRequest.json").toURI()),
+						CaptureRequest.class);
+				
+				Capture capture = captureApi.captureAuthorization(id,
+						authCapture);
+				System.out.println("Capture output against authorization: "
+						+ capture);
     
 ## Tests
 
