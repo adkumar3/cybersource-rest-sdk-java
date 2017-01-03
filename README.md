@@ -23,19 +23,22 @@ To install the cybersource-sdk-java from central repository,add dependency to yo
 3. A [VDP](https://vdp.visa.com) account with CyberSource enabled
     
 ## Running the Samples
-The classes in the ```samples/``` folder demonstrate the basics of using the API. Before building and running the samples, make sure to set the API key and secret key in the sample Java files first:
+The Sample.java class in the ```samples/``` folder demonstrate the basics of using the API. Before building and running the samples, make sure to set the API key and secret key in the sample Java file first:
 ```java
 ConfigurationBuilder builder = new ConfigurationBuilder();
 builder.setApiKey("apikey")
        .setSecretKey("secretkey")
 ```
+The sample.java accepts the type of transaction as program argument. So of we want to run a authCapture transaction we need to pass AuthCapture as the program argument.
+
+It reads the request from the resources folder. All the request is kept under the resources folder.
 
 If you've already built the SDK with Maven, you can build the samples from the main directory. Just run:
 ```
 javac -cp target/rest-sdk-java-1.0.0-SNAPSHOT.jar samples/*.java
 ```
 
-You can then run the samples from the same directory. For example, here's the command to run the SearchPayment example (if you're on Windows, change the path separator from ````:```` to ````;````):
+You can then run the sample from the same directory. For example, here's the command to run the SearchPayment example (if you're on Windows, change the path separator from ````:```` to ````;````):
 ```
 java -cp target/lib/*:target/*:./samples/ SearchPayment
 ```
