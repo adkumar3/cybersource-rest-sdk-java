@@ -10,8 +10,7 @@
         "cardType":"001",
         "encryptedData":"",
         "encryptedDescriptor":"",
-        "encryptedEncoding":"",
-        "encryptedWrappedKey":""
+        "encryptedEncoding":""
     },
     "billTo":{
         "street1":"901 Metro Center Blvd",
@@ -26,7 +25,6 @@
         "buildingNumber":"24",
         "district":"san mateo",
         "company":"visa",
-        "ipaddress":"10.20.408.500",
         "phoneNumber":"6508764564"
     },
     "shipTo":{
