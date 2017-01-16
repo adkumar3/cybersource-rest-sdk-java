@@ -29,10 +29,10 @@ ConfigurationBuilder builder = new ConfigurationBuilder();
 builder.setApiKey("apikey")
        .setSecretKey("secretkey")
 ```
-The TestTransaction.java accepts the type of transaction and name of the payload file as program argument. So if we want to run a authCapture transaction we need to pass AuthCapture AuthCaptureRequest.json as the program argument.
+The TestTransaction.java accepts the Service Name and name of the payload file as program argument. So if we want to run a authCapture transaction we need to pass AuthCapture AuthCaptureRequest.json as the program argument.
  TestTransaction <Service_name> <payload_file_name>
  
- Type of transaction parameter is mandatory in program arguments while running the TestTransaction class. If no arguments is passed then the program will exit.
+ Service_name parameter is mandatory in program arguments while running the TestTransaction class. If no arguments is passed then the program will exit.
 
 It reads the request from the resources folder. All the request payload files are kept under the resources folder.
 
