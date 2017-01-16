@@ -44,7 +44,7 @@ public class TestTransaction{
 		}
 		ConfigurationBuilder builder = new ConfigurationBuilder();
 		//merchant should set the apiKey and Secretkey
-		builder.setApiKey("H57WCXPHCNA7JIV1S1GY21v1rC2r9-tj4eX1HRQuS6z55-sUw").setSecretKey("iBhF-#N/QHa78Y+HNSmFe6a7PuRomkDKZ1BKyC+r")
+		builder.setApiKey("ApiKey").setSecretKey("SecretKey")
 		.setTimeoutMilliseconds(30000);
 	
 
@@ -251,7 +251,7 @@ public class TestTransaction{
 					+"\t Example if you want to execute an AuthCapture Transaction then the following command can be used \n\n"
 					+"\t\t java -cp target/lib/*:target/*:./samples/ TestTransaction AuthCapture AuthCaptureRequest.json \n\n"
 					+"\t If we dont specify payload file name then it will take the default value for the payload file name\n"
-					+"\t User must specify transaction type agrument while executing. If no argument is passed the program will terminate \n"
+					+"\t User must specify Service_name agrument while executing. If no argument is passed the program will terminate \n"
 					+"\t User defined Json Files can be placed under the resources folder and the same filename can be passed while executing the program\n\n"
 					
 					
