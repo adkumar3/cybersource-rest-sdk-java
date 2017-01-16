@@ -247,7 +247,7 @@ public class TestTransaction{
 		case "Help":
 			System.out.println("\n\n\n\t To compile the program run the following command \n\n"+
 					"\t\t javac -cp target/rest-sdk-java-1.0.1-SNAPSHOT.jar:target/lib/* samples/*.java \n\n"+" \t To Execute A transaction use the following command \n\n"
-					+ "\t\t java -cp target/lib/*:target/*:./samples/ TestTransaction <type_of_transaction> <name_of_the_payload_ file> \n\n"
+					+ "\t\t java -cp target/lib/*:target/*:./samples/ TestTransaction <Service_name> <name_of_the_payload_ file> \n\n"
 					+"\t Example if you want to execute an AuthCapture Transaction then the following command can be used \n\n"
 					+"\t\t java -cp target/lib/*:target/*:./samples/ TestTransaction AuthCapture AuthCaptureRequest.json \n\n"
 					+"\t If we dont specify payload file name then it will take the default value for the payload file name\n"

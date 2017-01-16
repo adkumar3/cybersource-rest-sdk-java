@@ -30,7 +30,7 @@ builder.setApiKey("apikey")
        .setSecretKey("secretkey")
 ```
 The TestTransaction.java accepts the type of transaction and name of the payload file as program argument. So if we want to run a authCapture transaction we need to pass AuthCapture AuthCaptureRequest.json as the program argument.
- TestTransaction <type_of_transaction> <payload_file_name>
+ TestTransaction <Service_name> <payload_file_name>
  
  Type of transaction parameter is mandatory in program arguments while running the TestTransaction class. If no arguments is passed then the program will exit.
 
@@ -43,8 +43,11 @@ If you've already built the SDK with Maven, you can build the samples from the m
 
 You can then run the sample from the same directory. For example, here's the command to run the TestTransaction example (if you're on Windows, change the path separator from ````:```` to ````;````):
 ```
-java -cp target/lib/*:target/*:./samples/ TestTransaction <type_of_transaction> <name_of_the_payload_ file>
+java -cp target/lib/*:target/*:./samples/ TestTransaction <Service_name> <name_of_the_payload_ file>
 ```
+
+To Run through the Help Menu Type the following command on the command prompt.
+java -cp target/lib/*:target/*:./samples/ TestTransaction Help
 
 ### Authorization and Capture (Credit Card) Example
 case "AuthCapture":
