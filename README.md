@@ -1,29 +1,28 @@
 # Cybersource REST API Library for Java
-[![Build Status](https://travis-ci.org/CyberSource/cybersource-rest-sdk-java.png?branch=master)]
-(https://travis-ci.org/CyberSource/cybersource-rest-sdk-java)
+[![Build Status](https://travis-ci.org/CyberSource/cybersource-rest-sdk-java.png?branch=master)](https://travis-ci.org/CyberSource/cybersource-rest-sdk-java)
 
-Java client bindings for the CyberSource REST API. Documentation for the CyberSource Payments REST API can be found [here](https://vdp.visa.com/products/cybersource/reference).
+Java client bindings for the CyberSource REST API. Documentation for the CyberSource Payments REST API can be found [here](https://developer.visa.com/products/cybersource/reference).
 
-##Package Managers
+## Package Managers
 
 ### Maven
 To install the cybersource-sdk-java from central repository,add dependency to your application pom.xml as below.
-````
-        <dependency>
-            <groupId>com.cybersource</groupId>
-            <artifactId>rest-sdk-java</artifactId>
-            <version>1.0.0</version>
-        </dependency> 
-````
- Run mvn install, to install dependency
+```xml
+<dependency>
+  <groupId>com.cybersource</groupId>
+  <artifactId>rest-sdk-java</artifactId>
+  <version>1.0.0</version>
+</dependency> 
+```
+Run `mvn install` to install dependency
 
 ## Requirements
 1. Java SDK 1.8  
 2. Maven 3 and later  
-3. A [VDP](https://vdp.visa.com) account with CyberSource enabled
+3. A [VDP](https://developer.visa.com) account with CyberSource enabled
     
 ## Running the Samples
-The classes in the ```samples/``` folder demonstrate the basics of using the API. Before building and running the samples, make sure to set the API key and secret key in the sample Java files first:
+The classes in the [samples](/samples) folder demonstrate the basics of using the API. Before building and running the samples, make sure to set the API key and secret key in the sample Java files first:
 ```java
 ConfigurationBuilder builder = new ConfigurationBuilder();
 builder.setApiKey("apikey")
@@ -72,6 +71,5 @@ try {
 ```
     
 ## Tests
-
-Run the test suite with ```mvn test```.
+Run the test suite with `mvn test`.
 
